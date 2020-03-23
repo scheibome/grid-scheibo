@@ -13,11 +13,11 @@
 
 ## Usage
 
-``
+```
 @import
 '../../../node_modules/grid-scheibo/source/variables',
 '../../../node_modules/grid-scheibo/source/grid-scheibo';
-``
+```
 
 ---
 
@@ -25,7 +25,7 @@
 
 Insert your settings before the import
 
-``
+```
 // add own gutter size
 $col-gutter-size: 2rem;
 
@@ -49,4 +49,4 @@ $col-grid-breaks: (
 );
 
 @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
-``
+```
