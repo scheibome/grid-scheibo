@@ -1,6 +1,6 @@
 {
   "name": "grid-scheibo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple scss grid based on flexbox",
   "main": "index.js",
   "scripts": {
