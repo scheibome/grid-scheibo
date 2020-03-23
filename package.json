@@ -1,10 +1,16 @@
 {
   "name": "grid-scheibo",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simple scss grid based on flexbox",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cleanup": "rimraf docs/*",
+    "scss:lint": "sass-lint -v -q",
+    "scss:compile": "node-sass source --output docs --output-style compressed --quiet --linefeed lf",
+    "css:autoprefix": "postcss --use autoprefixer -r docs/*.css --map false",
+    "build:css": "npm-run-all scss:lint scss:compile css:autoprefix",
+    "build:templates": "pug source/ --out docs/ -P",
+    "build": "npm-run-all cleanup build:templates build:css"
   },
   "repository": {
     "type": "git",
@@ -16,10 +22,21 @@
     "scss",
     "css"
   ],
-  "author": "Thomas Scheibitz",
-  "license": "ISC",
+  "author": "Thomas Scheibitz <npm@scheibitz.com> (https://www.scheibitz.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/scheibome/grid-scheibo/issues"
   },
-  "homepage": "https://github.com/scheibome/grid-scheibo#readme"
+  "homepage": "https://github.com/scheibome/grid-scheibo#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^3.0.2",
+    "sass-lint": "^1.13.1"
+  },
+  "sasslintConfig": ".scss-lint.yml"
 }

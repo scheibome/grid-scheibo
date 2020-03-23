@@ -1,0 +1,83 @@
+@mixin w-($size) {
+  @if $size == 'full' {
+    width: #{map-get($col-widths, $size)};
+  } @else {
+    width: calc(#{map-get($col-widths, $size)}*100% - (1 - #{map-get($col-widths, $size)})*#{$col-gutter-size});
+  }
+}
+
+.o-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--between {
+    justify-content: space-between;
+  }
+
+  &--row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--vertical-align {
+    [class^="o-row__col"] {
+      margin-bottom: $col-gutter-size;
+    }
+  }
+
+  &__col {
+    @each $key, $value in $col-widths {
+      &-#{$key} {
+        @include w-(#{$key});
+      }
+    }
+  }
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (min-width: $breakValue) {
+      &\@#{$break} {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &--between {
+        &\@#{$break} {
+          justify-content: space-between;
+        }
+      }
+
+      &--row-reverse {
+        &\@#{$break} {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &--center {
+        &\@#{$break} {
+          align-items: center;
+        }
+      }
+
+      &--vertical-align {
+        &\@#{$break} {
+          [class^="o-row__col"] {
+            margin-bottom: $col-gutter-size;
+          }
+        }
+      }
+
+      &__col {
+        @each $key, $value in $col-widths {
+          &-#{$key} {
+            &\@#{$break} {
+              @include w-(#{$key});
+            }
+          }
+        }
+      }
+    }
+  }
+}

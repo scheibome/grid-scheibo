@@ -1,0 +1,49 @@
+@import "normalize";
+@import "variables";
+@import "grid-scheibo";
+
+$color-primary: #3498DB;
+$alizarin: #DE2439;
+$selectiveyellow: #F6B10B;
+$springbud: #BAD500;
+$kellygreen: #1BB934;
+$texas: #E7EB90;
+$gainsboro: #E0E0E0;
+
+
+// Additional CSS
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1 {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+[class^="o-row"] {
+  // border: 1px solid red;
+}
+
+[class^="o-row__"] {
+  background-color: yellow;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.container {
+  margin: auto;
+  max-width: 1600px;
+}
