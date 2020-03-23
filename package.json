@@ -1,0 +1,25 @@
+{
+  "name": "grid-scheibo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scheibome/grid-scheibo.git"
+  },
+  "keywords": [
+    "grid",
+    "scheibo",
+    "scss",
+    "css"
+  ],
+  "author": "Thomas Scheibitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scheibome/grid-scheibo/issues"
+  },
+  "homepage": "https://github.com/scheibome/grid-scheibo#readme"
+}
