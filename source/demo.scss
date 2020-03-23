@@ -1,14 +1,10 @@
 @import "normalize";
 @import "variables";
 @import "grid-scheibo";
+@import "intro";
 
 $color-primary: #3498DB;
-$alizarin: #DE2439;
-$selectiveyellow: #F6B10B;
 $springbud: #BAD500;
-$kellygreen: #1BB934;
-$texas: #E7EB90;
-$gainsboro: #E0E0E0;
 
 
 // Additional CSS
@@ -20,7 +16,7 @@ body {
   margin: 0;
   font-family: arial, sans-serif;
   font-size: 16px;
-  // background-color: black;
+  background-color: black;
 }
 
 *,
@@ -29,21 +25,16 @@ body {
   box-sizing: inherit;
 }
 
-h1 {
+h1, h2 {
   margin: 3rem auto;
   text-align: center;
-  position: relative;
   max-width: 800px;
   font-size: 3rem;
-  color: rgba(0,0,255,0.5);
+  color: $color-primary;
+}
 
-  &:after {
-    content: "Grid-Scheibo - a simple scss grid based on flexbox";
-    position: absolute;
-    left: 0.1em;
-    top: 0.1em;
-    color: rgba(255,0,0,0.5);
-  }
+h2 {
+  font-size: 2.5rem;
 }
 
 [class^="o-row"] {
@@ -51,12 +42,17 @@ h1 {
 }
 
 [class^="o-row__"] {
-  background-color: yellow;
+  background-color: $springbud;
   text-align: center;
-  border: 1px solid red;
 }
 
 .container {
   margin: auto;
   max-width: 1600px;
+}
+
+.npm-icons {
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
 }

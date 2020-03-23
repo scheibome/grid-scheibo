@@ -1,0 +1,25 @@
+.c-intro {
+  opacity: 0;
+  position: relative;
+  animation: intro 1.5s forwards;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    top: -2rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.c-box {
+  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#FF6F91 20%,#D169A3 50%,#9A67A5 110%);
+  color: #FFF;
+  border-radius: 4px;
+  padding: 2rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px #333;
+}

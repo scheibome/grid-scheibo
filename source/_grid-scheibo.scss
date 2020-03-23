@@ -14,6 +14,10 @@
     justify-content: space-between;
   }
 
+  &--justify-center {
+    justify-content: center;
+  }
+
   &--row-reverse {
     flex-direction: row-reverse;
   }
@@ -23,7 +27,7 @@
   }
 
   &--vertical-align {
-    [class^="o-row__col"] {
+    [class*="o-row__col"] {
       margin-bottom: $col-gutter-size;
     }
   }
@@ -49,6 +53,12 @@
         }
       }
 
+      &--justify-center {
+        &\@#{$break} {
+          justify-content: center;
+        }
+      }
+
       &--row-reverse {
         &\@#{$break} {
           flex-direction: row-reverse;
@@ -63,7 +73,7 @@
 
       &--vertical-align {
         &\@#{$break} {
-          [class^="o-row__col"] {
+          [class*="o-row__col"] {
             margin-bottom: $col-gutter-size;
           }
         }
