@@ -4,6 +4,7 @@
  [![Issues](https://img.shields.io/github/issues/scheibome/grid-scheibo.svg)]( https://github.com/scheibome/grid-scheibo/issues) ![npm](https://img.shields.io/npm/dt/grid-scheibo.svg)
 ![npm](https://img.shields.io/npm/l/grid-scheibo.svg)
 
+Demo (https://scheibome.github.io/grid-scheibo/)
 
 ## Install
 
