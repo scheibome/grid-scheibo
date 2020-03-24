@@ -38,6 +38,10 @@
         @include w-(#{$key});
       }
     }
+
+    &--flexgrow {
+      flex-grow: 1;
+    }
   }
 
   @each $break, $breakValue in $col-grid-breaks {
@@ -85,6 +89,12 @@
             &\@#{$break} {
               @include w-(#{$key});
             }
+          }
+        }
+
+        &--flexgrow {
+          &\@#{$break} {
+            flex-grow: 1;
           }
         }
       }
