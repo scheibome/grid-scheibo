@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="demo.css">
   </head>
   <body>
-    <h1>Grid-Scheibo - a simple scss grid based on flexbox</h1>
-    <div class="npm-icons"><a href="https://npmjs.org/package/grid-scheibo"><img src="https://badge.fury.io/js/grid-scheibo.svg?style=flat" alt="npm version"></a><a href="https://github.com/scheibome/grid-scheibo/issues"><img src="https://img.shields.io/github/issues/scheibome/grid-scheibo.svg" alt="npm version"></a><a href="https://npmjs.org/package/grid-scheibo"><img src="https://badge.fury.io/js/grid-scheibo.svg?style=flat" alt="npm version"></a><img src="https://img.shields.io/npm/dt/grid-scheibo.svg"><img src="https://img.shields.io/npm/l/grid-scheibo.svg"></div>
+    <div class="centertext">
+      <h1 data-text="Grid-Scheibo - a simple scss grid based on flexbox">Grid-Scheibo - a simple scss grid based on flexbox</h1>
+    </div>
+    <div class="npm-icons"><a href="https://npmjs.org/package/grid-scheibo"><img src="https://badge.fury.io/js/grid-scheibo.svg?style=flat" alt="npm version"></a> <a href="https://github.com/scheibome/grid-scheibo/issues"><img src="https://img.shields.io/github/issues/scheibome/grid-scheibo.svg" alt="npm version"></a> <a href="https://npmjs.org/package/grid-scheibo"><img src="https://badge.fury.io/js/grid-scheibo.svg?style=flat" alt="npm version"></a> <img src="https://img.shields.io/npm/dt/grid-scheibo.svg"> <img src="https://img.shields.io/npm/l/grid-scheibo.svg">
+    </div>
     <div class="container">
+      <div class="o-row o-row--between o-row--vertical-align">
+        <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+          <p>1/2,1/3@tablet,1/4@desktop</p>
+        </div>
+        <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+          <p>1/2,1/3@tablet,1/4@desktop</p>
+        </div>
+        <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+          <p>1/2,1/3@tablet,1/4@desktop</p>
+        </div>
+        <div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+          <p>1/2,full@tablet,1/4@desktop</p>
+        </div>
+      </div>
       <div class="o-row@tablet o-row--between@tablet o-row--vertical-align">
-        <div class="o-row__col-1/2@tablet o-row__col-1/4@desktop ">
-          <p>1/2@tablet,1/4@desktop</p>
-        </div>
-        <div class="o-row__col-1/2@tablet o-row__col-1/4@desktop ">
-          <p>1/2@tablet,1/4@desktop</p>
-        </div>
-        <div class="o-row__col-1/2@tablet o-row__col-1/4@desktop ">
-          <p>1/2@tablet,1/4@desktop</p>
-        </div>
-        <div class="o-row__col-1/2@tablet o-row__col-1/4@desktop ">
-          <p>1/2@tablet,1/4@desktop</p>
-        </div>
         <div class="o-row__col-1/2@tablet o-row__col-1/5@desktop ">
           <p>1/2@tablet,1/5@desktop</p>
         </div>
@@ -101,7 +106,9 @@
           <p>1/3@400,1/6@desktop</p>
         </div>
       </div>
-      <h2>Demoboxes</h2>
+      <div class="centertext">
+        <h2 data-text="Demoboxes">Demoboxes</h2>
+      </div>
       <div class="o-row@tablet o-row--between@tablet o-row--vertical-align">
         <div class="c-box o-row__col-1/2@tablet o-row__col-1/3@desktop">
           <h3 class="c-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
