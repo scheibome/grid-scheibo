@@ -5,6 +5,9 @@
 
 $color-primary: #3498DB;
 $springbud: #BAD500;
+$islamicgreen: #47A500;
+$red: #FF0000;
+$lightyellow: #FFFFE1;
 
 
 // Additional CSS
@@ -18,6 +21,7 @@ body {
   font-family: arial, sans-serif;
   font-size: 16px;
   background-color: black;
+  color: $lightyellow;
 }
 
 *,
@@ -27,9 +31,7 @@ body {
 }
 
 h1, h2 {
-  margin: 3rem auto;
-  text-align: center;
-  max-width: 800px;
+  margin: 0;
   font-size: 3rem;
   color: $color-primary;
 }
@@ -45,16 +47,18 @@ h2 {
   &:after {
     content: attr(data-text);
     position: absolute;
-    left: 0.1em;
+    left: 0;
     top: 0.1em;
-    color: rgba(255,0,0,0.5);
+    color: rgba($red, 0.5);
     z-index: -1;
   }
 }
 
 .centertext {
+  margin: 3rem auto;
   text-align: center;
   padding: 0 2rem;
+  max-width: 800px;
 }
 
 [class^="o-row"] {
@@ -63,6 +67,8 @@ h2 {
 
 [class^="o-row__"] {
   background-color: $springbud;
+  border: 1px solid $islamicgreen;
+  color: black;
   text-align: center;
   overflow: hidden;
 }
@@ -76,4 +82,17 @@ h2 {
   margin: 0 auto 2rem auto;
   max-width: 800px;
   text-align: center;
+}
+
+.hljs {
+  margin: auto;
+  max-width: 800px;
+}
+
+hr {
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  height: 0;
+  margin-bottom: 6rem;
 }

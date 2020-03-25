@@ -1,4 +1,4 @@
-# Grid-Scheibo - a simple scss grid based on flexbox
+# Grid-Scheibo - A Simple SCSS Grid Based on Flexbox
 
 [![npm version](https://badge.fury.io/js/grid-scheibo.svg?style=flat)](https://npmjs.org/package/grid-scheibo)
  [![Issues](https://img.shields.io/github/issues/scheibome/grid-scheibo.svg)]( https://github.com/scheibome/grid-scheibo/issues) ![npm](https://img.shields.io/npm/dt/grid-scheibo.svg)
@@ -22,7 +22,7 @@ Demo (https://scheibome.github.io/grid-scheibo/)
 
 ---
 
-## Advanced usage
+## Advanced Usage
 
 Insert your settings before the import
 

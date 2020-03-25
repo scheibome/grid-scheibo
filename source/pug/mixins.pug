@@ -1,0 +1,13 @@
+mixin column(size, realtext)
+  - var classname = '';
+  each val in size
+    - classname += 'o-row__col-' + val + ' '
+  div(class=classname)
+    if realtext
+      p #{realtext}
+    else
+      p #{size}
+
+mixin introbox(title, content)
+  h3.c-intro #{title}
+  p.c-intro #{content}

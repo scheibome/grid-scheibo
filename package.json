@@ -9,7 +9,8 @@
     "scss:compile": "node-sass source --output docs --output-style compressed --quiet --linefeed lf",
     "css:autoprefix": "postcss --use autoprefixer -r docs/*.css --map false",
     "build:css": "npm-run-all scss:lint scss:compile css:autoprefix",
-    "build:templates": "pug source/ --out docs/ -P",
+    "build:templates": "pug source/index.pug --out docs/ -P",
+    "watch:templates": "pug source/index.pug --out docs/ -P -w",
     "build": "npm-run-all cleanup build:templates build:css"
   },
   "repository": {
@@ -27,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/scheibome/grid-scheibo/issues"
   },
-  "homepage": "https://github.com/scheibome/grid-scheibo#readme",
+  "homepage": "https://scheibome.github.io/grid-scheibo/",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "node-sass": "^4.13.1",
@@ -38,5 +39,6 @@
     "rimraf": "^3.0.2",
     "sass-lint": "^1.13.1"
   },
-  "sasslintConfig": ".scss-lint.yml"
+  "sasslintConfig": ".scss-lint.yml",
+  "dependencies": {}
 }

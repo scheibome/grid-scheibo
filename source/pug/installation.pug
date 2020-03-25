@@ -1,0 +1,43 @@
+mixin installation
+  .centertext
+    h2#install(data-text="Install") Install
+  pre
+    code.console
+      | npm i grid-scheibo
+
+  .centertext
+    h2#usage(data-text="Usage") Usage
+  pre
+    code.scss
+      | @import
+      | '../node_modules/grid-scheibo/source/variables',
+      | '../node_modules/grid-scheibo/source/grid-scheibo';
+
+  .centertext
+    h2#advancedusage(data-text="Advanced Usage") Advanced Usage
+    p Insert your settings before the import
+  pre
+    code.scss
+      | // add own gutter size
+      | $col-gutter-size: 2rem;
+      |
+      | // your grid
+      | $col-widths: (
+      |   '1\\/8': '1/8',
+      |   '2\\/8': '2/8',
+      |   '3\\/8': '3/8',
+      |   '4\\/8': '4/8',
+      |   '5\\/8': '5/8',
+      |   '6\\/8': '6/8',
+      |   '7\\/8': '7/8',
+      |   'full': 100%
+      | );
+      |
+      | // your breaks
+      | $col-grid-breaks: (
+      |   tablet: '900px',
+      |   desktop: '1024px',
+      |   wide: '1400px'
+      | );
+      |
+      | @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
