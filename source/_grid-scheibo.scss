@@ -6,7 +6,16 @@
   }
 }
 
+@mixin w2-($size) {
+  @if $size == 'full' {
+    width: #{map-get($col-widths, $size)};
+  } @else {
+    width: calc(#{map-get($col-widths, $size)}*100% - (1 - #{map-get($col-widths, $size)})*0px);
+  }
+}
+
 .o-row {
+  $this: &;
   display: flex;
   flex-wrap: wrap;
 
@@ -88,6 +97,10 @@
           &-#{$key} {
             &\@#{$break} {
               @include w-(#{$key});
+
+              [class*="o-row--nogutter"] & {
+                @include w2-(#{$key});
+              }
             }
           }
         }
