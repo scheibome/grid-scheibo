@@ -61,10 +61,6 @@ h2 {
   max-width: 800px;
 }
 
-[class^="o-row"] {
-  // border: 1px solid red;
-}
-
 [class^="o-row__"] {
   background-color: $springbud;
   border: 1px solid $islamicgreen;
@@ -95,4 +91,64 @@ hr {
   color: transparent;
   height: 0;
   margin-bottom: 6rem;
+}
+
+.c-nav {
+  display: flex;
+  margin: 2rem auto;
+  justify-content: space-between;
+  max-width: 650px;
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: $lightyellow;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    transition: max-width 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      position: absolute;
+      background-color: rgba($red, 0.3);
+      content: '';
+      left: 0;
+      right: 0;
+      height: 2px;
+      transition: background-color 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out;
+      z-index: -1;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    &:hover {
+
+      &:before,
+      &:after {
+        background-color: rgba($red, 1);
+      }
+
+      &:before {
+        top: calc(50% - 1px);
+      }
+
+      &:after {
+        bottom: calc(50% - 1px);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 400px) {
+
+    &__link {
+      width: 24%;
+    }
+  }
 }

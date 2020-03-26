@@ -1,0 +1,8 @@
+mixin navlink(title, target)
+  a.c-nav__link(href=target) #{title}
+
+nav.c-nav
+  +navlink('Install', '#install')
+  +navlink('Usage', '#usage')
+  +navlink('Advanced', '#advancedusage')
+  +navlink('Examples', '#examples')

@@ -1,6 +1,5 @@
 include pug/mixins
 include pug/examples
-include pug/installation
 
 doctype html
 html
@@ -16,79 +15,17 @@ html
   body
     .centertext
       h1(data-text="Grid-Scheibo - A Simple SCSS Grid Based on Flexbox") Grid-Scheibo - A Simple SCSS Grid Based on Flexbox
-    .npm-icons
-      a(href="https://npmjs.org/package/grid-scheibo")
-        img(src="https://badge.fury.io/js/grid-scheibo.svg?style=flat", alt="npm version")
-      =" "
-      a(href="https://github.com/scheibome/grid-scheibo/issues")
-        img(src="https://img.shields.io/github/issues/scheibome/grid-scheibo.svg", alt="npm version")
-      =" "
-      img(src="https://img.shields.io/npm/dt/grid-scheibo.svg")
-      =" "
-      img(src="https://img.shields.io/npm/l/grid-scheibo.svg")
+    include pug/navigation
+    include pug/icons
 
     .container
-      div(class="o-row o-row--between o-row--vertical-align")
-        +column(['1/2', '1/3@tablet', '1/4@desktop'])
-        +column(['1/2', '1/3@tablet', '1/4@desktop'])
-        +column(['1/2', '1/3@tablet', '1/4@desktop'])
-        +column(['1/2', 'full@tablet', '1/4@desktop'])
-      div(class="o-row@tablet o-row--between@tablet o-row--vertical-align")
-        +column(['1/2@tablet', '1/5@desktop'])
-        +column(['1/2@tablet', '1/5@desktop'])
-        +column(['1/3@tablet', '1/5@desktop'])
-        +column(['1/3@tablet', '1/5@desktop'])
-        +column(['1/3@tablet', '1/5@desktop'])
-        +column(['3/4@tablet'])
-        +column(['1/4@tablet'])
-        +column(['1/4@tablet'])
-        +column(['3/4@tablet'])
-        +column(['2/5@tablet'])
-        +column(['3/5@tablet'])
-        +column(['3/5@tablet'])
-        +column(['2/5@tablet'])
-      div(class="o-row@400 o-row--between@400 o-row--vertical-align")
-        +column(['1/2@400', 'full@desktop'])
-        +column(['1/2@400', 'full@desktop'])
-        +column(['1/3@400', '1/6@desktop'])
-        +column(['1/3@400', '1/6@desktop'])
-        +column(['1/3@400', '1/6@desktop'])
-        +column(['1/3@400', '1/6@desktop'])
-        +column(['1/3@400', '1/6@desktop'])
-        +column(['1/3@400', '1/6@desktop'])
+      include pug/startgrid
 
-      +installation
+      include pug/installation
 
       +codeexample1
       +codeexample2
       +codeexample3
       +codeexample4
 
-      .centertext
-        h2(data-text="Demoboxes") Demoboxes
-      div(class="o-row@tablet o-row--between@tablet o-row--vertical-align")
-        div.c-box(class="o-row__col-1/2@tablet o-row__col-1/3@desktop")
-          +introbox(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Negabat igitur ullam esse artem, quae ipsa a se proficisceretur; Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Non est igitur voluptas bonum. Cuius quidem, quoniam Stoicus fuit, sententia condemnata mihi videtur esse inanitas ista verborum. Duo Reges: constructio interrete. Ubi ut eam caperet aut quando? Naturales divitias dixit parabiles esse, quod parvo esset natura contenta.'
-          )
-        div.c-box(class="o-row__col-1/2@tablet o-row__col-1/3@desktop")
-          +introbox(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Negabat igitur ullam esse artem, quae ipsa a se proficisceretur; Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Non est igitur voluptas bonum. Cuius quidem, quoniam Stoicus fuit, sententia condemnata mihi videtur esse inanitas ista verborum. Duo Reges: constructio interrete. Ubi ut eam caperet aut quando? Naturales divitias dixit parabiles esse, quod parvo esset natura contenta.'
-          )
-        div.c-box(class="o-row__col-1/2@tablet o-row__col-1/3@desktop")
-          +introbox(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Negabat igitur ullam esse artem, quae ipsa a se proficisceretur; Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Non est igitur voluptas bonum. Cuius quidem, quoniam Stoicus fuit, sententia condemnata mihi videtur esse inanitas ista verborum. Duo Reges: constructio interrete. Ubi ut eam caperet aut quando? Naturales divitias dixit parabiles esse, quod parvo esset natura contenta.'
-          )
-        div.c-box(class="o-row__col-1/2@tablet o-row__col-2/3@desktop")
-          +introbox(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Negabat igitur ullam esse artem, quae ipsa a se proficisceretur; Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Non est igitur voluptas bonum. Cuius quidem, quoniam Stoicus fuit, sententia condemnata mihi videtur esse inanitas ista verborum. Duo Reges: constructio interrete. Ubi ut eam caperet aut quando? Naturales divitias dixit parabiles esse, quod parvo esset natura contenta.'
-          )
-        div.c-box(class="o-row__col-full@tablet o-row__col-1/3@desktop")
-          +introbox(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Negabat igitur ullam esse artem, quae ipsa a se proficisceretur; Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Non est igitur voluptas bonum. Cuius quidem, quoniam Stoicus fuit, sententia condemnata mihi videtur esse inanitas ista verborum. Duo Reges: constructio interrete. Ubi ut eam caperet aut quando? Naturales divitias dixit parabiles esse, quod parvo esset natura contenta.'
-          )
+      include pug/demoboxes
