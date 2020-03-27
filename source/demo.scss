@@ -1,6 +1,7 @@
 @import "normalize";
 @import "variables";
 @import "grid-scheibo";
+@import "cssgrid-scheibo";
 @import "intro";
 
 $color-primary: #3498DB;
@@ -61,7 +62,7 @@ h2 {
   max-width: 800px;
 }
 
-[class^="o-row__"] {
+.demoitem {
   background-color: $springbud;
   border: 1px solid $islamicgreen;
   color: black;

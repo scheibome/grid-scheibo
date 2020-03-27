@@ -1,0 +1,48 @@
+.o-grid {
+  display: grid;
+  grid-gap: $col-gutter-size;
+
+  @each $key, $value in $grid-setup {
+    &-#{$key} {
+      grid-template-columns: #{$value};
+    }
+
+    &--nogutter {
+      grid-gap: 0;
+    }
+
+    &--gutter {
+      grid-gap: $col-gutter-size;
+    }
+  }
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (min-width: $breakValue) {
+
+      &--nogutter {
+        &\@#{$break} {
+          grid-gap: 0;
+        }
+      }
+
+      &--gutter {
+        &\@#{$break} {
+          grid-gap: $col-gutter-size;
+        }
+      }
+
+      &\@#{$break} {
+        display: grid;
+        grid-gap: $col-gutter-size;
+      }
+
+      @each $key, $value in $grid-setup {
+        &-#{$key} {
+          &\@#{$break} {
+            grid-template-columns: #{$value};
+          }
+        }
+      }
+    }
+  }
+}

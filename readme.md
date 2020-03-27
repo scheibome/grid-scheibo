@@ -14,6 +14,14 @@ Demo (https://scheibome.github.io/grid-scheibo/)
 
 ## Usage
 
+#### Grid with CSS Grid
+```
+@import
+'../../../node_modules/grid-scheibo/source/variables',
+'../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
+```
+
+#### Grid with Flexbox
 ```
 @import
 '../../../node_modules/grid-scheibo/source/variables',
@@ -30,7 +38,14 @@ Insert your settings before the import
 // add own gutter size
 $col-gutter-size: 2rem;
 
-// your grid
+// your grid with CSS-Grid
+$grid-setup: (
+  '1-1': '1fr 1fr',
+  '1-1-1': '1fr 1fr 1fr',
+  '1-2-1': '1fr 2fr'
+);
+
+// your grid with flexbox
 $col-widths: (
   '1\\/8': '1/8',
   '2\\/8': '2/8',
@@ -49,12 +64,33 @@ $col-grid-breaks: (
   wide: '1400px'
 );
 
+// for using CSS-Grid
+@import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
+// for using Flexbox
 @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
 ```
 
 ### Examples
 
-####  o-row--nogutter
+#### Grid with CSS-Grid
+
+```
+<div class="o-grid o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop">
+  <div>Your Content</div>
+  <div>Your Content</div>
+  <div>Your Content</div>
+  <div>Your Content</div>
+  <div>Your Content</div>
+  <div>Your Content</div>
+  <div>Your Content</div>
+  <div>Your Content</div>
+</div>
+```
+
+
+#### Grid with Flexbox
+
+#####  o-row--nogutter
 
 ```
 <div class="o-row o-row--nogutter">
@@ -70,7 +106,7 @@ $col-grid-breaks: (
 ```
 
 
-#### o-row--between
+##### o-row--between
 
 ```
 <div class="o-row o-row--between">
@@ -85,7 +121,7 @@ $col-grid-breaks: (
 </div>
 ```
 
-#### o-row--between & o-row--vertical-align
+##### o-row--between & o-row--vertical-align
 
 ```
 <!-- o-row--between & o-row--vertical-align -->
@@ -100,7 +136,7 @@ $col-grid-breaks: (
 </div>
 ```
 
-#### o-row--row-reverse
+##### o-row--row-reverse
 
 ```
 <div class="o-row o-row--between o-row--vertical-align o-row--row-reverse@desktop">

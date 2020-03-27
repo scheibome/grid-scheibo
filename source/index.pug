@@ -4,7 +4,7 @@ include pug/examples
 doctype html
 html
   head
-    title Grid-Scheibo - A Simple SCSS Grid Based on Flexbox
+    title Grid-Scheibo - A Simple SCSS Grid Based on CSS-Grid or Flexbox
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="demo.css")
@@ -14,7 +14,8 @@ html
       hljs.initHighlightingOnLoad()
   body
     .centertext
-      h1(data-text="Grid-Scheibo - A Simple SCSS Grid Based on Flexbox") Grid-Scheibo - A Simple SCSS Grid Based on Flexbox
+      h1(data-text="Grid-Scheibo") Grid-Scheibo
+      h2(data-text="A Simple SCSS Grid Based on CSS-Grid or Flexbox") A Simple SCSS Grid Based on CSS-Grid or Flexbox
     include pug/navigation
     include pug/icons
 
@@ -23,6 +24,13 @@ html
 
       include pug/installation
 
+      .container
+        .centertext
+          h2#examples(data-text="Examples - Grid with CSS-Grid") Examples - Grid with CSS-Grid
+      +codeexamplecssgrid1
+      .container
+        .centertext
+          h2#examplesflex(data-text="Examples - Grid with Flexbox") Examples - Grid with Flexbox
       +codeexample1
       +codeexample2
       +codeexample3

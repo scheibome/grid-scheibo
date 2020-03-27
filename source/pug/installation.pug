@@ -8,6 +8,12 @@ pre
   h2#usage(data-text="Usage") Usage
 pre
   code.scss
+    | // Grid with CSS Grid
+    | @import
+    | '../node_modules/grid-scheibo/source/variables',
+    | '../node_modules/grid-scheibo/source/cssgrid-scheibo';
+    |
+    | // Grid with Flexbox
     | @import
     | '../node_modules/grid-scheibo/source/variables',
     | '../node_modules/grid-scheibo/source/grid-scheibo';
@@ -20,7 +26,14 @@ pre
     | // add own gutter size
     | $col-gutter-size: 2rem;
     |
-    | // your grid
+    | // your grid with CSS-Grid
+    | $grid-setup: (
+    | '1-1': '1fr 1fr',
+    | '1-1-1': '1fr 1fr 1fr',
+    | '1-2-1': '1fr 2fr'
+    | );
+    |
+    | // your grid with flexbox
     | $col-widths: (
     |   '1\\/8': '1/8',
     |   '2\\/8': '2/8',
@@ -39,4 +52,7 @@ pre
     |   wide: '1400px'
     | );
     |
+    | // for using CSS-Grid
+    | @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
+    | // for using Flexbox
     | @import '../../../node_modules/grid-scheibo/source/grid-scheibo';

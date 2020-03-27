@@ -20,6 +20,12 @@ $col-widths: (
   'full': 100%
 );
 
+$grid-setup: (
+  '1-1': '1fr 1fr',
+  '1-1-1': '1fr 1fr 1fr',
+  '1-2-1': '1fr 2fr 1fr'
+);
+
 $col-grid-breaks: (
   400: '400px',
   tablet: $grid-tablet,
