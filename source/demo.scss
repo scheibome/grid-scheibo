@@ -1,155 +1,54 @@
-@import "normalize";
-@import "variables";
+@import 'variables';
+@import 'framework';
+@import 'layout';
 @import "grid-scheibo";
 @import "cssgrid-scheibo";
-@import "intro";
-
-$color-primary: #3498DB;
-$springbud: #BAD500;
-$islamicgreen: #47A500;
-$red: #FF0000;
-$lightyellow: #FFFFE1;
-
-
-// Additional CSS
-html {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0 1rem;
-  font-family: arial, sans-serif;
-  font-size: 16px;
-  background-color: black;
-  color: $lightyellow;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-h1, h2 {
-  margin: 0;
-  font-size: 3rem;
-  color: $color-primary;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-[data-text] {
-  display: inline-block;
-  position: relative;
-
-  &:after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0.1em;
-    color: rgba($red, 0.5);
-    z-index: -1;
-  }
-}
-
-.centertext {
-  margin: 3rem auto;
-  text-align: center;
-  padding: 0 2rem;
-  max-width: 800px;
-}
 
 .demoitem {
-  background-color: $springbud;
-  border: 1px solid $islamicgreen;
-  color: black;
+  background-color: $action_3;
+  border: 1px solid $color_main;
+  color: $bg_light;
   text-align: center;
   overflow: hidden;
 }
 
-.container {
-  margin: auto;
-  max-width: 1600px;
-}
-
-.npm-icons {
-  margin: 0 auto 2rem auto;
-  max-width: 800px;
-  text-align: center;
-}
-
-.hljs {
-  margin: auto;
-  max-width: 800px;
-}
-
-hr {
-  border: none;
-  background-color: transparent;
-  color: transparent;
-  height: 0;
-  margin-bottom: 6rem;
-}
-
-.c-nav {
-  display: flex;
-  margin: 2rem auto;
-  justify-content: space-between;
-  max-width: 650px;
-
-  &__link {
-    position: relative;
-    text-decoration: none;
-    color: $lightyellow;
-    padding: 1rem 0.5rem;
-    text-align: center;
-    transition: max-width 0.5s ease-in-out;
-    cursor: pointer;
-
-    &:before,
-    &:after {
-      position: absolute;
-      background-color: rgba($red, 0.3);
-      content: '';
-      left: 0;
-      right: 0;
-      height: 2px;
-      transition: background-color 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out;
-      z-index: -1;
-    }
-
-    &:before {
-      top: 0;
-    }
-
-    &:after {
-      bottom: 0;
-    }
-
-    &:hover {
-
-      &:before,
-      &:after {
-        background-color: rgba($red, 1);
-      }
-
-      &:before {
-        top: calc(50% - 1px);
-      }
-
-      &:after {
-        bottom: calc(50% - 1px);
-      }
-    }
+.github-corner {
+  svg {
+    fill: $action_3;
+    color: $bg_light;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+    z-index: 1;
   }
+}
 
-  @media only screen and (min-width: 400px) {
+.octo-arm {
+  transform-origin: 130px 106px;
+}
 
-    &__link {
-      width: 24%;
-    }
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0)
+  }
+  20%, 60% {
+    transform: rotate(-25deg)
+  }
+  40%, 80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
   }
 }

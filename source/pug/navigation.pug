@@ -1,8 +1,9 @@
 mixin navlink(title, target)
-  a.c-nav__link(href=target) #{title}
+  a.link.mx-20.color-white(href=target) #{title}
 
-nav.c-nav
-  +navlink('Install', '#install')
-  +navlink('Usage', '#usage')
-  +navlink('Advanced', '#advancedusage')
-  +navlink('Examples', '#examples')
+nav.pt-35.pb-35.bg-dark.text-center.navigation_13
+  .container.px-xl-0
+    +navlink('Install', '#install')
+    +navlink('Usage', '#usage')
+    +navlink('Advanced', '#advancedusage')
+    +navlink('Examples', '#examples')

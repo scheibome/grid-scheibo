@@ -1,58 +1,64 @@
-.centertext
-  h2#install(data-text="Install") Install
-pre
-  code.console
-    | npm i grid-scheibo
+section.pt-75.pb-90.bg-light.content_4
+  .container.px-xl-0
+    .row.justify-content-center
+      .col-xl-7.col-lg-8.col-md-10.text-center
+        h2.mt-45.small#install(data-text="Install") Install
+      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+        pre
+          code.console
+            | npm i grid-scheibo
 
-.centertext
-  h2#usage(data-text="Usage") Usage
-pre
-  code.scss
-    | // Grid with CSS Grid
-    | @import
-    | '../node_modules/grid-scheibo/source/variables',
-    | '../node_modules/grid-scheibo/source/cssgrid-scheibo';
-    |
-    | // Grid with Flexbox
-    | @import
-    | '../node_modules/grid-scheibo/source/variables',
-    | '../node_modules/grid-scheibo/source/grid-scheibo';
+      .col-xl-7.col-lg-8.col-md-10.text-center
+        h2.mt-45.small#usage(data-text="Usage") Usage
+      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+        pre
+          code.scss
+            | // Grid with CSS Grid
+            | @import
+            | '../node_modules/grid-scheibo/source/variables',
+            | '../node_modules/grid-scheibo/source/cssgrid-scheibo';
+            |
+            | // Grid with Flexbox
+            | @import
+            | '../node_modules/grid-scheibo/source/variables',
+            | '../node_modules/grid-scheibo/source/grid-scheibo';
 
-.centertext
-  h2#advancedusage(data-text="Advanced Usage") Advanced Usage
-  p Insert your settings before the import
-pre
-  code.scss
-    | // add own gutter size
-    | $col-gutter-size: 2rem;
-    |
-    | // your grid with CSS-Grid
-    | $grid-setup: (
-    | '1-1': '1fr 1fr',
-    | '1-1-1': '1fr 1fr 1fr',
-    | '1-2-1': '1fr 2fr'
-    | );
-    |
-    | // your grid with flexbox
-    | $col-widths: (
-    |   '1\\/8': '1/8',
-    |   '2\\/8': '2/8',
-    |   '3\\/8': '3/8',
-    |   '4\\/8': '4/8',
-    |   '5\\/8': '5/8',
-    |   '6\\/8': '6/8',
-    |   '7\\/8': '7/8',
-    |   'full': 100%
-    | );
-    |
-    | // your breaks
-    | $col-grid-breaks: (
-    |   tablet: '900px',
-    |   desktop: '1024px',
-    |   wide: '1400px'
-    | );
-    |
-    | // for using CSS-Grid
-    | @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
-    | // for using Flexbox
-    | @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
+      .col-xl-7.col-lg-8.col-md-10.text-center
+        h2.mt-45.small#advancedusage(data-text="Advanced Usage") Advanced Usage
+        p Insert your settings before the import
+      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+        pre
+          code.scss
+            | // add own gutter size
+            | $col-gutter-size: 2rem;
+            |
+            | // your grid with CSS-Grid
+            | $grid-setup: (
+            | '1-1': '1fr 1fr',
+            | '1-1-1': '1fr 1fr 1fr',
+            | '1-2-1': '1fr 2fr'
+            | );
+            |
+            | // your grid with flexbox
+            | $col-widths: (
+            |   '1\\/8': '1/8',
+            |   '2\\/8': '2/8',
+            |   '3\\/8': '3/8',
+            |   '4\\/8': '4/8',
+            |   '5\\/8': '5/8',
+            |   '6\\/8': '6/8',
+            |   '7\\/8': '7/8',
+            |   'full': 100%
+            | );
+            |
+            | // your breaks
+            | $col-grid-breaks: (
+            |   tablet: '900px',
+            |   desktop: '1024px',
+            |   wide: '1400px'
+            | );
+            |
+            | // for using CSS-Grid
+            | @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
+            | // for using Flexbox
+            | @import '../../../node_modules/grid-scheibo/source/grid-scheibo';

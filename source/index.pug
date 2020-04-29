@@ -4,36 +4,48 @@ include pug/examples
 doctype html
 html
   head
-    title Grid-Scheibo - A Simple SCSS Grid Based on CSS-Grid or Flexbox
     meta(charset='utf-8')
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Grid-Scheibo - A Simple SCSS Grid Based on CSS-Grid or Flexbox
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', href='i/favicon.png', type='image/x-icon')
+    // Google Fonts
+    link(href='https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,600,500,700,800,900|DM+Sans:100,200,300,400,500,600,700,800,900&subset=latin', rel='stylesheet')
+    // Bootstrap 4.3.1 CSS
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
     link(rel="stylesheet", href="demo.css")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js")
     script.
       hljs.initHighlightingOnLoad()
   body
-    .centertext
-      h1(data-text="Grid-Scheibo") Grid-Scheibo
-      h2(data-text="A Simple SCSS Grid Based on CSS-Grid or Flexbox") A Simple SCSS Grid Based on
-        br
-        | CSS-Grid or Flexbox
+    include pug/forkedge
     include pug/navigation
-    include pug/icons
+    section.pt-80.pb-80.bg-light.content_1
+      .container.px-xl-0
+        .row.justify-content-center
+          .col-xl-7.col-lg-10.text-center
+            h1.f-22.color-heading.op-7.text-adaptive(data-text="Grid-Scheibo") Grid-Scheibo
+            h2.mt-25(data-text="A Simple SCSS Grid Based on CSS-Grid or Flexbox") A Simple SCSS Grid Based on<br>CSS-Grid or Flexbox
+    section.pt-30.pb-90.bg-light.content_4
 
-    .container
-      include pug/startgrid
+      .container
+        include pug/startgrid
 
       include pug/installation
 
-      .container
-        .centertext
-          h2#examples(data-text="Examples - Grid with CSS-Grid") Examples - Grid with CSS-Grid
-      +codeexamplecssgrid1
-      .container
-        .centertext
-          h2#examplesflex(data-text="Examples - Grid with Flexbox") Examples - Grid with Flexbox
-      +codeexample1
-      +codeexample2
-      +codeexample3
-      +codeexample4
+      section.pb-20.bg-light.content_4
+        .container.px-xl-0
+          .row.justify-content-center
+            .col-xl-7.col-lg-8.col-md-10.text-center
+              h2.mt-45.small#examples(data-text="Examples - Grid with CSS-Grid") Examples - Grid with CSS-Grid
+        +codeexamplecssgrid1
+
+      section.pb-20.bg-light.content_4
+        .container.px-xl-0
+          .row.justify-content-center
+            .col-xl-7.col-lg-8.col-md-10.text-center
+              h2.mt-45.small#examplesflex(data-text="Examples - Grid with Flexbox") Examples - Grid with Flexbox
+        +codeexample1
+        +codeexample2
+        +codeexample3
+        +codeexample4

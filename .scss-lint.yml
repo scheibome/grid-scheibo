@@ -14,6 +14,8 @@ files:
   include: 'source/**/*.s+(a|c)ss'
   ignore:
     - 'source/_normalize.scss'
+    - 'source/_framework.scss'
+    - 'source/_layout.scss'
 # Rule Configuration
 rules:
   # Extends

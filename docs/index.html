@@ -1,113 +1,138 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Grid-Scheibo - A Simple SCSS Grid Based on CSS-Grid or Flexbox</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Scheibo - A Simple SCSS Grid Based on CSS-Grid or Flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="i/favicon.png" type="image/x-icon">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,600,500,700,800,900|DM+Sans:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">
+    <!-- Bootstrap 4.3.1 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="demo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad()</script>
   </head>
-  <body>
-    <div class="centertext">
-      <h1 data-text="Grid-Scheibo">Grid-Scheibo</h1>
-      <h2 data-text="A Simple SCSS Grid Based on CSS-Grid or Flexbox">A Simple SCSS Grid Based on<br>CSS-Grid or Flexbox</h2>
-    </div>
-    <nav class="c-nav"><a class="c-nav__link" href="#install">Install</a><a class="c-nav__link" href="#usage">Usage</a><a class="c-nav__link" href="#advancedusage">Advanced</a><a class="c-nav__link" href="#examples">Examples</a>
+  <body><a href="https://github.com/scheibome/grid-scheibo" class="github-corner" aria-label="View source on GitHub">
+<svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
+<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" class="octo-arm"></path>
+<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+</svg>
+</a>
+    <nav class="pt-35 pb-35 bg-dark text-center navigation_13">
+      <div class="container px-xl-0"><a class="link mx-20 color-white" href="#install">Install</a><a class="link mx-20 color-white" href="#usage">Usage</a><a class="link mx-20 color-white" href="#advancedusage">Advanced</a><a class="link mx-20 color-white" href="#examples">Examples</a>
+      </div>
     </nav>
-    <div class="npm-icons"><a href="https://npmjs.org/package/grid-scheibo"><img src="https://badge.fury.io/js/grid-scheibo.svg?style=flat" alt="npm version"></a> <a href="https://github.com/scheibome/grid-scheibo/issues"><img src="https://img.shields.io/github/issues/scheibome/grid-scheibo.svg" alt="npm version"></a> <img src="https://img.shields.io/npm/dt/grid-scheibo.svg"> <img src="https://img.shields.io/npm/l/grid-scheibo.svg">
-    </div>
-    <div class="container">
-      <div class="o-row o-row--between o-row--vertical-align">
-        <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-          <p>1/2,1/3@tablet,1/4@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-          <p>1/2,1/3@tablet,1/4@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-          <p>1/2,1/3@tablet,1/4@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
-          <p>1/2,full@tablet,1/4@desktop</p>
+    <section class="pt-80 pb-80 bg-light content_1">
+      <div class="container px-xl-0">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 col-lg-10 text-center">
+            <h1 class="f-22 color-heading op-7 text-adaptive" data-text="Grid-Scheibo">Grid-Scheibo</h1>
+            <h2 class="mt-25" data-text="A Simple SCSS Grid Based on CSS-Grid or Flexbox">A Simple SCSS Grid Based on<br>CSS-Grid or Flexbox</h2>
+          </div>
         </div>
       </div>
-      <div class="o-row@tablet o-row--between@tablet o-row--vertical-align">
-        <div class="demoitem o-row__col-1/2@tablet o-row__col-1/5@desktop ">
-          <p>1/2@tablet,1/5@desktop</p>
+    </section>
+    <section class="pt-30 pb-90 bg-light content_4">
+      <div class="container">
+        <div class="o-row o-row--between o-row--vertical-align">
+          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+            <p>1/2,1/3@tablet,1/4@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+            <p>1/2,1/3@tablet,1/4@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+            <p>1/2,1/3@tablet,1/4@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+            <p>1/2,full@tablet,1/4@desktop</p>
+          </div>
         </div>
-        <div class="demoitem o-row__col-1/2@tablet o-row__col-1/5@desktop ">
-          <p>1/2@tablet,1/5@desktop</p>
+        <div class="o-row@tablet o-row--between@tablet o-row--vertical-align">
+          <div class="demoitem o-row__col-1/2@tablet o-row__col-1/5@desktop ">
+            <p>1/2@tablet,1/5@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/2@tablet o-row__col-1/5@desktop ">
+            <p>1/2@tablet,1/5@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@tablet o-row__col-1/5@desktop ">
+            <p>1/3@tablet,1/5@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@tablet o-row__col-1/5@desktop ">
+            <p>1/3@tablet,1/5@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@tablet o-row__col-1/5@desktop ">
+            <p>1/3@tablet,1/5@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-3/4@tablet ">
+            <p>3/4@tablet</p>
+          </div>
+          <div class="demoitem o-row__col-1/4@tablet ">
+            <p>1/4@tablet</p>
+          </div>
+          <div class="demoitem o-row__col-1/4@tablet ">
+            <p>1/4@tablet</p>
+          </div>
+          <div class="demoitem o-row__col-3/4@tablet ">
+            <p>3/4@tablet</p>
+          </div>
+          <div class="demoitem o-row__col-2/5@tablet ">
+            <p>2/5@tablet</p>
+          </div>
+          <div class="demoitem o-row__col-3/5@tablet ">
+            <p>3/5@tablet</p>
+          </div>
+          <div class="demoitem o-row__col-3/5@tablet ">
+            <p>3/5@tablet</p>
+          </div>
+          <div class="demoitem o-row__col-2/5@tablet ">
+            <p>2/5@tablet</p>
+          </div>
         </div>
-        <div class="demoitem o-row__col-1/3@tablet o-row__col-1/5@desktop ">
-          <p>1/3@tablet,1/5@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@tablet o-row__col-1/5@desktop ">
-          <p>1/3@tablet,1/5@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@tablet o-row__col-1/5@desktop ">
-          <p>1/3@tablet,1/5@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-3/4@tablet ">
-          <p>3/4@tablet</p>
-        </div>
-        <div class="demoitem o-row__col-1/4@tablet ">
-          <p>1/4@tablet</p>
-        </div>
-        <div class="demoitem o-row__col-1/4@tablet ">
-          <p>1/4@tablet</p>
-        </div>
-        <div class="demoitem o-row__col-3/4@tablet ">
-          <p>3/4@tablet</p>
-        </div>
-        <div class="demoitem o-row__col-2/5@tablet ">
-          <p>2/5@tablet</p>
-        </div>
-        <div class="demoitem o-row__col-3/5@tablet ">
-          <p>3/5@tablet</p>
-        </div>
-        <div class="demoitem o-row__col-3/5@tablet ">
-          <p>3/5@tablet</p>
-        </div>
-        <div class="demoitem o-row__col-2/5@tablet ">
-          <p>2/5@tablet</p>
+        <div class="o-row@400 o-row--between@400 o-row--vertical-align">
+          <div class="demoitem o-row__col-1/2@400 o-row__col-full@desktop ">
+            <p>1/2@400,full@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/2@400 o-row__col-full@desktop ">
+            <p>1/2@400,full@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
+            <p>1/3@400,1/6@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
+            <p>1/3@400,1/6@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
+            <p>1/3@400,1/6@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
+            <p>1/3@400,1/6@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
+            <p>1/3@400,1/6@desktop</p>
+          </div>
+          <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
+            <p>1/3@400,1/6@desktop</p>
+          </div>
         </div>
       </div>
-      <div class="o-row@400 o-row--between@400 o-row--vertical-align">
-        <div class="demoitem o-row__col-1/2@400 o-row__col-full@desktop ">
-          <p>1/2@400,full@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/2@400 o-row__col-full@desktop ">
-          <p>1/2@400,full@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
-          <p>1/3@400,1/6@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
-          <p>1/3@400,1/6@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
-          <p>1/3@400,1/6@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
-          <p>1/3@400,1/6@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
-          <p>1/3@400,1/6@desktop</p>
-        </div>
-        <div class="demoitem o-row__col-1/3@400 o-row__col-1/6@desktop ">
-          <p>1/3@400,1/6@desktop</p>
-        </div>
-      </div>
-      <div class="centertext">
-        <h2 id="install" data-text="Install">Install</h2>
-      </div>
-      <pre><code class="console">npm i grid-scheibo</code></pre>
-      <div class="centertext">
-        <h2 id="usage" data-text="Usage">Usage</h2>
-      </div>
-      <pre><code class="scss">// Grid with CSS Grid
+      <section class="pt-75 pb-90 bg-light content_4">
+        <div class="container px-xl-0">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-10 text-center">
+              <h2 class="mt-45 small" id="install" data-text="Install">Install</h2>
+            </div>
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="console">npm i grid-scheibo</code></pre>
+            </div>
+            <div class="col-xl-7 col-lg-8 col-md-10 text-center">
+              <h2 class="mt-45 small" id="usage" data-text="Usage">Usage</h2>
+            </div>
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="scss">// Grid with CSS Grid
 @import
 '../node_modules/grid-scheibo/source/variables',
 '../node_modules/grid-scheibo/source/cssgrid-scheibo';
@@ -116,11 +141,13 @@
 @import
 '../node_modules/grid-scheibo/source/variables',
 '../node_modules/grid-scheibo/source/grid-scheibo';</code></pre>
-      <div class="centertext">
-        <h2 id="advancedusage" data-text="Advanced Usage">Advanced Usage</h2>
-        <p>Insert your settings before the import</p>
-      </div>
-      <pre><code class="scss">// add own gutter size
+            </div>
+            <div class="col-xl-7 col-lg-8 col-md-10 text-center">
+              <h2 class="mt-45 small" id="advancedusage" data-text="Advanced Usage">Advanced Usage</h2>
+              <p>Insert your settings before the import</p>
+            </div>
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="scss">// add own gutter size
 $col-gutter-size: 2rem;
 
 // your grid with CSS-Grid
@@ -153,13 +180,22 @@ $col-grid-breaks: (
 @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
 // for using Flexbox
 @import '../../../node_modules/grid-scheibo/source/grid-scheibo';</code></pre>
-      <div class="container">
-        <div class="centertext">
-          <h2 id="examples" data-text="Examples - Grid with CSS-Grid">Examples - Grid with CSS-Grid</h2>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <pre><code class="language-html">&lt;!-- o-row--nogutter --&gt;
+      </section>
+      <section class="pb-20 bg-light content_4">
+        <div class="container px-xl-0">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-10 text-center">
+              <h2 class="mt-45 small" id="examples" data-text="Examples - Grid with CSS-Grid">Examples - Grid with CSS-Grid</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container pb-90">
+          <div class="row justify-content-center">
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="language-html">&lt;!-- o-row--nogutter --&gt;
 &lt;div class="o-grid o-grid--nogutter@tablet  o-grid--gutter@desktop o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop"&gt;
   &lt;div&gt;Your Content&lt;/div&gt;
   &lt;div&gt;Your Content&lt;/div&gt;
@@ -170,44 +206,51 @@ $col-grid-breaks: (
   &lt;div&gt;Your Content&lt;/div&gt;
   &lt;div&gt;Your Content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <div class="o-grid o-grid--nogutter@tablet  o-grid--gutter@desktop o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop">
-          <div class="demoitem">
-            <p>Your Content</p>
+            </div>
           </div>
-          <div class="demoitem">
-            <p>Your Content</p>
-          </div>
-          <div class="demoitem">
-            <p>Your Content</p>
-          </div>
-          <div class="demoitem">
-            <p>Your Content</p>
-          </div>
-          <div class="demoitem">
-            <p>Your Content</p>
-          </div>
-          <div class="demoitem">
-            <p>Your Content</p>
-          </div>
-          <div class="demoitem">
-            <p>Your Content</p>
-          </div>
-          <div class="demoitem">
-            <p>Your Content</p>
-          </div>
-          <div class="demoitem">
-            <p>Your Content</p>
+          <div class="o-grid o-grid--nogutter@tablet  o-grid--gutter@desktop o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop">
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
+            <div class="demoitem">
+              <p>Your Content</p>
+            </div>
           </div>
         </div>
-        <hr/>
-      </div>
-      <div class="container">
-        <div class="centertext">
-          <h2 id="examplesflex" data-text="Examples - Grid with Flexbox">Examples - Grid with Flexbox</h2>
+      </section>
+      <section class="pb-20 bg-light content_4">
+        <div class="container px-xl-0">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-10 text-center">
+              <h2 class="mt-45 small" id="examplesflex" data-text="Examples - Grid with Flexbox">Examples - Grid with Flexbox</h2>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <pre><code class="language-html">&lt;!-- o-row--nogutter --&gt;
+        <div class="container pb-90">
+          <div class="row justify-content-center">
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="language-html">&lt;!-- o-row--nogutter --&gt;
 &lt;div class="o-row o-row--nogutter"&gt;
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
@@ -218,36 +261,39 @@ $col-grid-breaks: (
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <div class="o-row o-row--nogutter">
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
           </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
-            <p>1/2,full@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
-            <p>1/2,full@tablet,1/4@desktop</p>
+          <div class="o-row o-row--nogutter">
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+              <p>1/2,full@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+              <p>1/2,full@tablet,1/4@desktop</p>
+            </div>
           </div>
         </div>
-        <hr/>
-      </div>
-      <div class="container">
-        <pre><code class="language-html">&lt;!-- o-row--between --&gt;
+        <div class="container pb-90">
+          <div class="row justify-content-center">
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="language-html">&lt;!-- o-row--between --&gt;
 &lt;div class="o-row o-row--between"&gt;
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
@@ -258,36 +304,39 @@ $col-grid-breaks: (
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <div class="o-row o-row--between">
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
           </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
-            <p>1/2,full@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
-            <p>1/2,full@tablet,1/4@desktop</p>
+          <div class="o-row o-row--between">
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+              <p>1/2,full@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+              <p>1/2,full@tablet,1/4@desktop</p>
+            </div>
           </div>
         </div>
-        <hr/>
-      </div>
-      <div class="container">
-        <pre><code class="language-html">&lt;!-- o-row--between & o-row--vertical-align --&gt;
+        <div class="container pb-90">
+          <div class="row justify-content-center">
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="language-html">&lt;!-- o-row--between & o-row--vertical-align --&gt;
 &lt;div class="o-row o-row--between o-row--vertical-align"&gt;
   &lt;div class="o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
@@ -297,55 +346,60 @@ $col-grid-breaks: (
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/2@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <div class="o-row o-row--between o-row--vertical-align">
-          <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>full,1/3@tablet,1/4@desktop</p>
+            </div>
           </div>
-          <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>full,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
-            <p>1/2,full@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>1/2,1/3@tablet,1/4@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/2@desktop ">
-            <p>1/2,1/3@tablet,1/2@desktop</p>
-          </div>
-          <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>full,1/3@tablet,1/4@desktop</p>
+          <div class="o-row o-row--between o-row--vertical-align">
+            <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>full,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>full,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+              <p>1/2,full@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>1/2,1/3@tablet,1/4@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/2@desktop ">
+              <p>1/2,1/3@tablet,1/2@desktop</p>
+            </div>
+            <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>full,1/3@tablet,1/4@desktop</p>
+            </div>
           </div>
         </div>
-        <hr/>
-      </div>
-      <div class="container">
-        <pre><code class="language-html">&lt;!-- o-row--row-reverse --&gt;
+        <div class="container pb-90">
+          <div class="row justify-content-center">
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="language-html">&lt;!-- o-row--row-reverse --&gt;
 &lt;div class="o-row o-row--between o-row--vertical-align o-row--row-reverse@desktop"&gt;
   &lt;div class="o-row__col-full o-row__col-1/3@tablet"&gt;Column 1&lt;/div&gt;
   &lt;div class="o-row__col-full o-row__col-1/3@tablet"&gt;Column 2&lt;/div&gt;
   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet"&gt;Column 3&lt;/div&gt;
   &lt;div class="o-row__col-1/2 o-row__col-full@tablet"&gt;Column 4&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <div class="o-row o-row--between o-row--vertical-align o-row--row-reverse@desktop">
-          <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>Column 1</p>
+            </div>
           </div>
-          <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>Column 2</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
-            <p>Column 3</p>
-          </div>
-          <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
-            <p>Column 4</p>
+          <div class="o-row o-row--between o-row--vertical-align o-row--row-reverse@desktop">
+            <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>Column 1</p>
+            </div>
+            <div class="demoitem o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>Column 2</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop ">
+              <p>Column 3</p>
+            </div>
+            <div class="demoitem o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop ">
+              <p>Column 4</p>
+            </div>
           </div>
         </div>
-        <hr/>
-      </div>
-    </div>
+      </section>
+    </section>
   </body>
 </html>
