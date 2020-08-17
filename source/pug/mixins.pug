@@ -7,3 +7,16 @@ mixin column(size, realtext)
       p #{realtext}
     else
       p #{size}
+
+mixin columnInnerContent(size, realtext)
+  - var classname = '';
+  each val in size
+    - classname += 'o-row__col-' + val + ' '
+  div(class=classname)
+    if realtext
+      div.demoitem
+        p #{realtext}
+    else
+      div.demoitem
+        p #{size}
+

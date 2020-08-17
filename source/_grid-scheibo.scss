@@ -41,10 +41,23 @@
     }
   }
 
+  &--gutter {
+    margin-left: -$col-gutter-size;
+
+    [class*="o-row__col"] {
+      padding-left: $col-gutter-size;
+    }
+  }
+
   &__col {
     @each $key, $value in $col-widths {
       &-#{$key} {
         @include w-(#{$key});
+
+        [class*="o-row--gutter"] &,
+        [class*="o-row--nogutter"] & {
+          @include w2-(#{$key});
+        }
       }
     }
 
@@ -92,12 +105,23 @@
         }
       }
 
+      &--gutter {
+        margin-left: -$col-gutter-size;
+
+        &\@#{$break} {
+          [class*="o-row__col"] {
+            padding-left: $col-gutter-size;
+          }
+        }
+      }
+
       &__col {
         @each $key, $value in $col-widths {
           &-#{$key} {
             &\@#{$break} {
               @include w-(#{$key});
 
+              [class*="o-row--gutter"] &,
               [class*="o-row--nogutter"] & {
                 @include w2-(#{$key});
               }
