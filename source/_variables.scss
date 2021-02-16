@@ -19,7 +19,7 @@ $col-widths-defaults: (
   '4\\/6': '4/6',
   '5\\/6': '5/6',
   'full': 100%
-);
+) !default;
 $col-widths: map_merge($col-widths-defaults, $col-widths);
 
 
@@ -28,7 +28,7 @@ $grid-setup-defaults: (
   '1-1': '1fr 1fr',
   '1-1-1': '1fr 1fr 1fr',
   '1-2-1': '1fr 2fr 1fr'
-);
+) !default;
 $grid-setup: map_merge($grid-setup-defaults, $grid-setup);
 
 
@@ -37,5 +37,5 @@ $col-grid-breaks-defaults: (
   400: '400px',
   tablet: $grid-tablet,
   desktop: $grid-desktop
-);
+) !default;
 $col-grid-breaks: map_merge($col-grid-breaks-defaults, $col-grid-breaks);
