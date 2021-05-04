@@ -23,7 +23,7 @@
 </svg>
 </a>
     <nav class="pt-35 pb-35 bg-dark text-center navigation_13">
-      <div class="container px-xl-0"><a class="link mx-20 color-white" href="#install">Install</a><a class="link mx-20 color-white" href="#usage">Usage</a><a class="link mx-20 color-white" href="#advancedusage">Advanced</a><a class="link mx-20 color-white" href="#examples">Examples</a>
+      <div class="container px-xl-0"><a class="link mx-20 color-white" href="#install">Install</a><a class="link mx-20 color-white" href="#usage">Usage</a><a class="link mx-20 color-white" href="#advancedusage">Advanced</a><a class="link mx-20 color-white" href="#personalize">Personalize</a><a class="link mx-20 color-white" href="#examples">Examples</a>
       </div>
     </nav>
     <section class="pt-80 pb-80 bg-light content_1">
@@ -181,6 +181,24 @@ $col-grid-breaks: (
 @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
 // for using Flexbox
 @import '../../../node_modules/grid-scheibo/source/grid-scheibo';</code></pre>
+            </div>
+            <div class="col-xl-7 col-lg-8 col-md-10 text-center">
+              <h2 class="mt-45 small" id="personalize" data-text="Personalize">Personalize</h2>
+              <p>Set your own classname</p>
+            </div>
+            <div class="mt-30 col-xl-8 col-lg-8 col-md-9 col-sm-10 f-18">
+              <pre><code class="scss">// import mixins
+@import '../../../node_modules/grid-scheibo/source/mixins';
+
+// set your own classname for css-grid
+.yourownclassname {
+  @include css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
+}
+
+// set your own classname for flexbox-grid
+.yourownclassname {
+  @include grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks);
+}</code></pre>
             </div>
           </div>
         </div>

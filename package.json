@@ -40,6 +40,5 @@
     "rimraf": "^3.0.2",
     "sass-lint": "^1.13.1"
   },
-  "sasslintConfig": ".scss-lint.yml",
-  "dependencies": {}
+  "sasslintConfig": ".scss-lint.yml"
 }

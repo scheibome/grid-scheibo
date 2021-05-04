@@ -62,3 +62,22 @@ section.pt-75.pb-90.bg-light.content_4
             | @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
             | // for using Flexbox
             | @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
+
+      .col-xl-7.col-lg-8.col-md-10.text-center
+        h2.mt-45.small#personalize(data-text="Personalize") Personalize
+        p Set your own classname
+      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+        pre
+          code.scss
+            | // import mixins
+            | @import '../../../node_modules/grid-scheibo/source/mixins';
+            |
+            | // set your own classname for css-grid
+            | .yourownclassname {
+            |   @include css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
+            | }
+            |
+            | // set your own classname for flexbox-grid
+            | .yourownclassname {
+            |   @include grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks);
+            | }

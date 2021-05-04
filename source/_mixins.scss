@@ -1,0 +1,192 @@
+// Start mixins for grid.scheibo
+
+@mixin w-($size) {
+  @if $size == 'full' {
+    width: #{map-get($col-widths, $size)};
+  } @else {
+    width: calc(#{map-get($col-widths, $size)}*100% - (1 - #{map-get($col-widths, $size)})*#{$col-gutter-size});
+  }
+}
+
+@mixin w2-($size) {
+  @if $size == 'full' {
+    width: #{map-get($col-widths, $size)};
+  } @else {
+    width: calc(#{map-get($col-widths, $size)}*100% - (1 - #{map-get($col-widths, $size)})*0px);
+  }
+}
+
+@mixin grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks) {
+  $this: &;
+  $this-short: str-slice(#{$this}, 2);
+  display: flex;
+  flex-wrap: wrap;
+
+  &--between {
+    justify-content: space-between;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+
+  &--row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--vertical-align {
+    [class*="#{$this-short}__col"] {
+      margin-bottom: $col-gutter-size;
+    }
+  }
+
+  &--gutter {
+    margin-left: -$col-gutter-size;
+
+    [class*="#{$this-short}__col"] {
+      padding-left: $col-gutter-size;
+    }
+  }
+
+  &__col {
+    @each $key, $value in $col-widths {
+      &-#{$key} {
+        @include w-(#{$key});
+
+        [class*="#{$this-short}--gutter"] &,
+        [class*="#{$this-short}--nogutter"] & {
+          @include w2-(#{$key});
+        }
+      }
+    }
+
+    &--flexgrow {
+      flex-grow: 1;
+    }
+  }
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (min-width: $breakValue) {
+      &\@#{$break} {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &--between {
+        &\@#{$break} {
+          justify-content: space-between;
+        }
+      }
+
+      &--justify-center {
+        &\@#{$break} {
+          justify-content: center;
+        }
+      }
+
+      &--row-reverse {
+        &\@#{$break} {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &--center {
+        &\@#{$break} {
+          align-items: center;
+        }
+      }
+
+      &--vertical-align {
+        &\@#{$break} {
+          [class*="#{$this-short}__col"] {
+            margin-bottom: $col-gutter-size;
+          }
+        }
+      }
+
+      &--gutter {
+        margin-left: -$col-gutter-size;
+
+        &\@#{$break} {
+          [class*="#{$this-short}__col"] {
+            padding-left: $col-gutter-size;
+          }
+        }
+      }
+
+      &__col {
+        @each $key, $value in $col-widths {
+          &-#{$key} {
+            &\@#{$break} {
+              @include w-(#{$key});
+
+              [class*="#{$this-short}--gutter"] &,
+              [class*="#{$this-short}--nogutter"] & {
+                @include w2-(#{$key});
+              }
+            }
+          }
+        }
+
+        &--flexgrow {
+          &\@#{$break} {
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks) {
+  display: grid;
+  grid-gap: $col-gutter-size;
+
+  @each $key, $value in $grid-setup {
+    &-#{$key} {
+      grid-template-columns: #{$value};
+    }
+
+    &--nogutter {
+      grid-gap: 0;
+    }
+
+    &--gutter {
+      grid-gap: $col-gutter-size;
+    }
+  }
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (min-width: $breakValue) {
+
+      &--nogutter {
+        &\@#{$break} {
+          grid-gap: 0;
+        }
+      }
+
+      &--gutter {
+        &\@#{$break} {
+          grid-gap: $col-gutter-size;
+        }
+      }
+
+      &\@#{$break} {
+        display: grid;
+        grid-gap: $col-gutter-size;
+      }
+
+      @each $key, $value in $grid-setup {
+        &-#{$key} {
+          &\@#{$break} {
+            grid-template-columns: #{$value};
+          }
+        }
+      }
+    }
+  }
+}
