@@ -146,17 +146,17 @@
   display: grid;
   grid-gap: $col-gutter-size;
 
+  &--nogutter {
+    grid-gap: 0;
+  }
+
+  &--gutter {
+    grid-gap: $col-gutter-size;
+  }
+
   @each $key, $value in $grid-setup {
     &-#{$key} {
       grid-template-columns: #{$value};
-    }
-
-    &--nogutter {
-      grid-gap: 0;
-    }
-
-    &--gutter {
-      grid-gap: $col-gutter-size;
     }
   }
 
