@@ -8,25 +8,27 @@ Demo (https://scheibome.github.io/grid-scheibo/)
 
 ## Install
 
-``npm install grid-scheibo``
+~~~
+npm install grid-scheibo
+~~~
 
 ---
 
 ## Usage
 
 #### Grid with CSS Grid
-```
+~~~scss
 @import
 '../../../node_modules/grid-scheibo/source/variables',
 '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
-```
+~~~
 
 #### Grid with Flexbox
-```
+~~~scss
 @import
 '../../../node_modules/grid-scheibo/source/variables',
 '../../../node_modules/grid-scheibo/source/grid-scheibo';
-```
+~~~
 
 ---
 
@@ -34,7 +36,7 @@ Demo (https://scheibome.github.io/grid-scheibo/)
 
 Insert your settings before the import
 
-```
+~~~scss
 // add own gutter size
 $col-gutter-size: 2rem;
 
@@ -68,13 +70,13 @@ $col-grid-breaks: (
 @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
 // for using Flexbox
 @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
-```
+~~~
 
 ### Examples
 
 #### Grid with CSS-Grid
 
-```
+~~~html
 <div class="o-grid o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop">
   <div>Your Content</div>
   <div>Your Content</div>
@@ -85,14 +87,14 @@ $col-grid-breaks: (
   <div>Your Content</div>
   <div>Your Content</div>
 </div>
-```
+~~~
 
 
 #### Grid with Flexbox
 
 #####  o-row--nogutter
 
-```
+~~~html
 <div class="o-row o-row--nogutter">
   <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
   <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
@@ -103,12 +105,12 @@ $col-grid-breaks: (
   <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
   <div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop">Your Content</div>
 </div>
-```
+~~~
 
 
 ##### o-row--between
 
-```
+~~~html
 <div class="o-row o-row--between">
   <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
   <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
@@ -119,11 +121,11 @@ $col-grid-breaks: (
   <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
   <div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop">Your Content</div>
 </div>
-```
+~~~
 
 ##### o-row--between & o-row--vertical-align
 
-```
+~~~html
 <!-- o-row--between & o-row--vertical-align -->
 <div class="o-row o-row--between o-row--vertical-align">
   <div class="o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
@@ -134,15 +136,15 @@ $col-grid-breaks: (
   <div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/2@desktop">Your Content</div>
   <div class="o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop">Your Content</div>
 </div>
-```
+~~~
 
 ##### o-row--row-reverse
 
-```
+~~~html
 <div class="o-row o-row--between o-row--vertical-align o-row--row-reverse@desktop">
   <div class="o-row__col-full o-row__col-1/3@tablet">Column 1</div>
   <div class="o-row__col-full o-row__col-1/3@tablet">Column 2</div>
   <div class="o-row__col-1/2 o-row__col-1/3@tablet">Column 3</div>
   <div class="o-row__col-1/2 o-row__col-full@tablet">Column 4</div>
 </div>
-```
+~~~
