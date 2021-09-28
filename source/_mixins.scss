@@ -1,6 +1,6 @@
 // Start mixins for grid.scheibo
 
-@mixin w-($size) {
+@mixin w-($size, $col-gutter-size) {
   @if $size == 'full' {
     width: #{map-get($col-widths, $size)};
   } @else {
@@ -55,7 +55,7 @@
   &__col {
     @each $key, $value in $col-widths {
       &-#{$key} {
-        @include w-(#{$key});
+        @include w-(#{$key}, $col-gutter-size);
 
         [class*="#{$this-short}--gutter"] &,
         [class*="#{$this-short}--nogutter"] & {
@@ -122,7 +122,7 @@
         @each $key, $value in $col-widths {
           &-#{$key} {
             &\@#{$break} {
-              @include w-(#{$key});
+              @include w-(#{$key}, $col-gutter-size);
 
               [class*="#{$this-short}--gutter"] &,
               [class*="#{$this-short}--nogutter"] & {
