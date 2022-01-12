@@ -47,7 +47,7 @@
   &--gutter {
     margin-left: -$col-gutter-size;
 
-    [class*="#{$this-short}__col"] {
+    > [class*="#{$this-short}__col"] {
       padding-left: $col-gutter-size;
     }
   }
@@ -112,7 +112,7 @@
         margin-left: -$col-gutter-size;
 
         &\@#{$break} {
-          [class*="#{$this-short}__col"] {
+          > [class*="#{$this-short}__col"] {
             padding-left: $col-gutter-size;
           }
         }
