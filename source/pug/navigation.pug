@@ -1,7 +1,7 @@
 mixin navlink(title, target)
-  a.link.mx-20.color-white(href=target) #{title}
+  a.text-decoration-none.mx-2.text-light(href=target) #{title}
 
-nav.pt-35.pb-35.bg-dark.text-center.navigation_13
+nav.py-4.bg-primary.text-center
   .container.px-xl-0
     +navlink('Install', '#install')
     +navlink('Usage', '#usage')

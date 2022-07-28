@@ -1,24 +1,27 @@
-// Start mixins for grid.scheibo
+@use 'sass:map';
+@use 'sass:string';
 
-@mixin w-($size, $col-gutter-size) {
+// Start mixins for grid.scheibo
+@mixin w-($size, $col-gutter-size) { /* stylelint-disable-line scss/at-mixin-pattern */
   @if $size == 'full' {
-    width: #{map-get($col-widths, $size)};
+    width: #{map.get($col-widths, $size)};
   } @else {
-    width: calc(#{map-get($col-widths, $size)}*100% - (1 - #{map-get($col-widths, $size)})*#{$col-gutter-size});
+    width: calc(#{map.get($col-widths, $size)} * 100% - (1 - #{map.get($col-widths, $size)}) * #{$col-gutter-size});
   }
 }
 
-@mixin w2-($size) {
+@mixin w2-($size) { /* stylelint-disable-line scss/at-mixin-pattern */
   @if $size == 'full' {
-    width: #{map-get($col-widths, $size)};
+    width: #{map.get($col-widths, $size)};
   } @else {
-    width: calc(#{map-get($col-widths, $size)}*100% - (1 - #{map-get($col-widths, $size)})*0px);
+    width: calc(#{map.get($col-widths, $size)} * 100% - (1 - #{map.get($col-widths, $size)}) * 0px);
   }
 }
 
 @mixin grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks) {
   $this: &;
-  $this-short: str-slice(#{$this}, 2);
+  $this-short: string.slice(#{$this}, 2);
+
   display: flex;
   flex-wrap: wrap;
 
@@ -40,15 +43,15 @@
 
   &--vertical-align {
     > [class*="#{$this-short}__col"] {
-      margin-bottom: $col-gutter-size;
+      margin-block-end: $col-gutter-size;
     }
   }
 
   &--gutter {
-    margin-left: -$col-gutter-size;
+    margin-inline-start: -$col-gutter-size;
 
     > [class*="#{$this-short}__col"] {
-      padding-left: $col-gutter-size;
+      padding-inline-start: $col-gutter-size;
     }
   }
 
@@ -103,17 +106,17 @@
       &--vertical-align {
         &\@#{$break} {
           > [class*="#{$this-short}__col"] {
-            margin-bottom: $col-gutter-size;
+            margin-block-end: $col-gutter-size;
           }
         }
       }
 
       &--gutter {
-        margin-left: -$col-gutter-size;
+        margin-inline-start: -$col-gutter-size;
 
         &\@#{$break} {
           > [class*="#{$this-short}__col"] {
-            padding-left: $col-gutter-size;
+            padding-inline-start: $col-gutter-size;
           }
         }
       }

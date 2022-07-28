@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cleanup": "rimraf docs/*",
-    "scss:lint": "sass-lint -v -q",
+    "scss:lint": "stylelint 'source/**/*.scss'",
     "scss:compile": "sass source:docs --no-source-map --style=compressed",
     "css:autoprefix": "postcss --use autoprefixer -r docs/*.css --map false",
     "build:css": "npm-run-all scss:lint scss:compile css:autoprefix",
@@ -31,6 +31,7 @@
   "homepage": "https://scheibome.github.io/grid-scheibo/",
   "devDependencies": {
     "autoprefixer": "^10.2.4",
+    "bootstrap": "^5.2.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.4",
     "postcss-cli": "^10.0.0",
@@ -38,7 +39,10 @@
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2",
     "sass": "^1.54.0",
-    "sass-lint": "^1.13.1"
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
+    "stylelint-use-logical": "^2.0.0"
   },
   "sasslintConfig": ".scss-lint.yml"
 }

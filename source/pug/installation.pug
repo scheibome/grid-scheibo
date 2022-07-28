@@ -1,16 +1,16 @@
-section.pt-75.pb-90.bg-light.content_4
-  .container.px-xl-0
-    .row.justify-content-center
-      .col-xl-7.col-lg-8.col-md-10.text-center
-        h2.mt-45.small#install(data-text="Install") Install
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+section.py-6.bg-light
+  .container
+    .o-row.o-row--justify-center
+      .text-center(class="o-row__col-2/3")
+        h2.mb-5.text-primary#install(data-text="Install") Install
+      div(class="o-row__col-2/3")
         pre
           code.console
             | npm i grid-scheibo
 
-      .col-xl-7.col-lg-8.col-md-10.text-center
-        h2.mt-45.small#usage(data-text="Usage") Usage
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+      .text-center(class="o-row__col-2/3")
+        h2.mt-6.mb-5.text-primary#usage(data-text="Usage") Usage
+      div(class="o-row__col-2/3")
         pre
           code.scss
             | // Grid with CSS Grid
@@ -23,10 +23,10 @@ section.pt-75.pb-90.bg-light.content_4
             | '../node_modules/grid-scheibo/source/variables',
             | '../node_modules/grid-scheibo/source/grid-scheibo';
 
-      .col-xl-7.col-lg-8.col-md-10.text-center
-        h2.mt-45.small#advancedusage(data-text="Advanced Usage") Advanced Usage
-        p Insert your settings before the import
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+      .text-center(class="o-row__col-2/3")
+        h2.mt-6.text-primary#advancedusage(data-text="Advanced Usage") Advanced Usage
+        p.mb-5 Insert your settings before the import
+      div(class="o-row__col-2/3")
         pre
           code.scss
             | // add own gutter size
@@ -63,10 +63,10 @@ section.pt-75.pb-90.bg-light.content_4
             | // for using Flexbox
             | @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
 
-      .col-xl-7.col-lg-8.col-md-10.text-center
-        h2.mt-45.small#personalize(data-text="Personalize") Personalize
-        p Set your own classname
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+      .text-center(class="o-row__col-2/3")
+        h2.mt-6.text-primary#personalize(data-text="Personalize") Personalize
+        p.mb-5 Set your own classname
+      div(class="o-row__col-2/3")
         pre
           code.scss
             | // import mixins

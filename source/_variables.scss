@@ -1,7 +1,10 @@
+@use 'sass:map';
+
 $col-gutter-size: 16px !default;
 $grid-tablet: 768px !default;
 $grid-desktop: 1024px !default;
 
+// Col-Widths
 $col-widths: () !default;
 $col-widths-defaults: (
   '1\\/2': '1/2',
@@ -20,22 +23,22 @@ $col-widths-defaults: (
   '5\\/6': '5/6',
   'full': 100%
 ) !default;
-$col-widths: map_merge($col-widths-defaults, $col-widths);
+$col-widths: map.merge($col-widths-defaults, $col-widths);
 
-
+// Grid Setup
 $grid-setup: () !default;
 $grid-setup-defaults: (
   '1-1': '1fr 1fr',
   '1-1-1': '1fr 1fr 1fr',
   '1-2-1': '1fr 2fr 1fr'
 ) !default;
-$grid-setup: map_merge($grid-setup-defaults, $grid-setup);
+$grid-setup: map.merge($grid-setup-defaults, $grid-setup);
 
-
+// Grid Column Breaks
 $col-grid-breaks: () !default;
 $col-grid-breaks-defaults: (
   400: '400px',
   tablet: $grid-tablet,
   desktop: $grid-desktop
 ) !default;
-$col-grid-breaks: map_merge($col-grid-breaks-defaults, $col-grid-breaks);
+$col-grid-breaks: map.merge($col-grid-breaks-defaults, $col-grid-breaks);

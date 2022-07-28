@@ -1,7 +1,7 @@
 mixin codeexamplecssgrid1
-  .container.pb-90
-    .row.justify-content-center
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+  .container
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--nogutter --&gt;
@@ -37,9 +37,9 @@ mixin codeexamplecssgrid1
         p Your Content
 
 mixin codeexample1
-  .container.pb-90
-    .row.justify-content-center
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+  .container.mb-7
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--nogutter --&gt;
@@ -65,9 +65,9 @@ mixin codeexample1
       +column(['1/2', 'full@tablet', '1/4@desktop'])
 
 mixin codeexample2
-  .container.pb-90
-    .row.justify-content-center
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+  .container.mb-7
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--between --&gt;
@@ -94,9 +94,9 @@ mixin codeexample2
 
 
 mixin codeexample3
-  .container.pb-90
-    .row.justify-content-center
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+  .container.mb-7
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--between & o-row--vertical-align --&gt;
@@ -121,9 +121,9 @@ mixin codeexample3
 
 
 mixin codeexample4
-  .container.pb-90
-    .row.justify-content-center
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+  .container
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--row-reverse --&gt;
@@ -141,9 +141,9 @@ mixin codeexample4
       +column(['1/2', 'full@tablet', '1/4@desktop'], 'Column 4')
 
 mixin codeexample5
-  .container.pb-90
-    .row.justify-content-center
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+  .container.mb-7
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--gutter (with negative margin) --&gt;
@@ -165,9 +165,9 @@ mixin codeexample5
       +columnInnerContent(['1/2', '1/3@tablet', '1/2@desktop'])
 
 mixin codeexample6
-  .container.pb-90
-    .row.justify-content-center
-      .mt-30.col-xl-8.col-lg-8.col-md-9.col-sm-10.f-18
+  .container.mb-7
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--gutter (with negative margin) & o-row--vertical-align --&gt;

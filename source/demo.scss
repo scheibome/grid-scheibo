@@ -1,24 +1,64 @@
+@use 'sass:map';
 @import 'variables';
-@import 'variables_demo';
-@import 'framework';
-@import 'layout';
+@import '../node_modules/bootstrap/scss/functions';
+
+$col-widths: (
+  '1\\/12': '1/12',
+);
+$col-widths: map.merge($col-widths-defaults, $col-widths);
+
+@import 'cssgrid-scheibo';
+@import 'grid-scheibo';
+
+// Default variable overrides
+$primary: #175883;
+$secondary: #E93A7D;
+$h1-font-size: 4rem;
+$h2-font-size: 3rem;
+
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-spacers: (
+  6: $spacer * 5,
+  7: $spacer * 6,
+);
+$spacers: map.merge($spacers, $custom-spacers);
+
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/root';
+
+// 6. Optionally include any other parts as needed
+@import '../node_modules/bootstrap/scss/utilities';
+@import '../node_modules/bootstrap/scss/reboot';
+@import '../node_modules/bootstrap/scss/type';
+@import '../node_modules/bootstrap/scss/containers';
+@import '../node_modules/bootstrap/scss/helpers';
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import '../node_modules/bootstrap/scss/utilities/api';
 
 .demoitem {
-  background-color: $action_3;
-  border: 1px solid $color_main;
-  color: $bg_light;
+  background-color: $secondary;
+  border: 1px solid $primary;
+  color: white;
   text-align: center;
   overflow: hidden;
 }
 
 .github-corner {
+
   svg {
-    fill: $action_3;
-    color: $bg_light;
+    fill: $secondary;
+    color: white;
     position: absolute;
-    top: 0;
+    inset-block-start: 0;
     border: 0;
-    right: 0;
+    inset-inline-end: 0;
     z-index: 1;
   }
 }
@@ -28,26 +68,34 @@
 }
 
 .github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out
+  animation: octocat-wave 560ms ease-in-out;
 }
 
 @keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0)
+
+  0%,
+  100% {
+    transform: rotate(0);
   }
-  20%, 60% {
-    transform: rotate(-25deg)
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
   }
-  40%, 80% {
-    transform: rotate(10deg)
+
+  40%,
+  80% {
+    transform: rotate(10deg);
   }
 }
 
 @media (max-width: 500px) {
+
   .github-corner:hover .octo-arm {
-    animation: none
+    animation: none;
   }
+
   .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+    animation: octocat-wave 560ms ease-in-out;
   }
 }
