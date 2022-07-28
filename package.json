@@ -1,12 +1,12 @@
 {
   "name": "grid-scheibo",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A Simple SCSS Grid Based on CSS-Grid or Flexbox",
   "main": "index.js",
   "scripts": {
     "cleanup": "rimraf docs/*",
     "scss:lint": "sass-lint -v -q",
-    "scss:compile": "node-sass source --output docs --output-style compressed --quiet --linefeed lf",
+    "scss:compile": "sass source:docs --no-source-map --style=compressed",
     "css:autoprefix": "postcss --use autoprefixer -r docs/*.css --map false",
     "build:css": "npm-run-all scss:lint scss:compile css:autoprefix",
     "build:templates": "pug source/index.pug --out docs/ -P",
@@ -31,13 +31,13 @@
   "homepage": "https://scheibome.github.io/grid-scheibo/",
   "devDependencies": {
     "autoprefixer": "^10.2.4",
-    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.4",
-    "postcss-cli": "^9.0.0",
+    "postcss-cli": "^10.0.0",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^3.0.2",
+    "sass": "^1.54.0",
     "sass-lint": "^1.13.1"
   },
   "sasslintConfig": ".scss-lint.yml"
