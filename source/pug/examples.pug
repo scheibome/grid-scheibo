@@ -77,8 +77,6 @@ mixin codeexample2
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
-            |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
-            |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             | &lt;/div&gt;
 
@@ -87,8 +85,6 @@ mixin codeexample2
       +column(['1/2', '1/3@tablet', '1/4@desktop'])
       +column(['1/2', '1/3@tablet', '1/4@desktop'])
       +column(['1/2', 'full@tablet', '1/4@desktop'])
-      +column(['1/2', '1/3@tablet', '1/4@desktop'])
-      +column(['1/2', '1/3@tablet', '1/4@desktop'])
       +column(['1/2', '1/3@tablet', '1/4@desktop'])
       +column(['1/2', 'full@tablet', '1/4@desktop'])
 
@@ -106,7 +102,6 @@ mixin codeexample3
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
-            |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/2@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-full o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             | &lt;/div&gt;
 
@@ -116,7 +111,6 @@ mixin codeexample3
       +column(['1/2', '1/3@tablet', '1/4@desktop'])
       +column(['1/2', 'full@tablet', '1/4@desktop'])
       +column(['1/2', '1/3@tablet', '1/4@desktop'])
-      +column(['1/2', '1/3@tablet', '1/2@desktop'])
       +column(['full', '1/3@tablet', '1/4@desktop'])
 
 
@@ -154,6 +148,7 @@ mixin codeexample5
             |   &lt;div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/2@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             | &lt;/div&gt;
 
     div(class="o-row o-row--gutter")
@@ -163,6 +158,7 @@ mixin codeexample5
       +columnInnerContent(['1/2', 'full@tablet', '1/4@desktop'])
       +columnInnerContent(['1/2', '1/3@tablet', '1/4@desktop'])
       +columnInnerContent(['1/2', '1/3@tablet', '1/2@desktop'])
+      +columnInnerContent(['1/2', '1/3@tablet', '1/4@desktop'])
 
 mixin codeexample6
   .container.mb-7
@@ -178,6 +174,7 @@ mixin codeexample6
             |   &lt;div class="o-row__col-1/2 o-row__col-full@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/2@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-row__col-1/2 o-row__col-1/3@tablet o-row__col-1/4@desktop"&gt;Your Content&lt;/div&gt;
             | &lt;/div&gt;
 
     div(class="o-row o-row--gutter o-row--vertical-align")
@@ -187,3 +184,4 @@ mixin codeexample6
       +columnInnerContent(['1/2', 'full@tablet', '1/4@desktop'])
       +columnInnerContent(['1/2', '1/3@tablet', '1/4@desktop'])
       +columnInnerContent(['1/2', '1/3@tablet', '1/2@desktop'])
+      +columnInnerContent(['1/2', '1/3@tablet', '1/4@desktop'])
