@@ -29,7 +29,7 @@ mixin codeexamplecssgrid2
       div(class="o-row__col-2/3")
         pre
           code.language-html
-            | &lt;!-- 12 Column Grid with offset --&gt;
+            | &lt;!-- 12 Column Grid with offset and order --&gt;
             | &lt;div class="o-grid o-grid-1-1-1@tablet o-grid-12cols@desktop"&gt;
             |   &lt;div&gt;Your Content&lt;/div&gt;
             |   &lt;div&gt;Your Content&lt;/div&gt;
@@ -51,6 +51,9 @@ mixin codeexamplecssgrid2
             |   &lt;div class="o-grid__col-3@desktop o-grid__col-start-3@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-grid__col-3@desktop o-grid__col-start-10@desktop"&gt;Your Content&lt;/div&gt;
             |   &lt;div class="o-grid__col-6@desktop o-grid__col-start-4@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-4@desktop"&gt;First, but unordered&lt;/div&gt;
+            |   &lt;div class="o-grid__col-4@desktop o-order--2@desktop"&gt;Third, but first&lt;/div&gt;
+            |   &lt;div class="o-grid__col-4@desktop o-order--1@desktop"&gt;Second, but last&lt;/div&gt;
             | &lt;/div&gt;
 
     div(class="o-grid o-grid-1-1-1@tablet o-grid-12cols@desktop")
@@ -75,6 +78,12 @@ mixin codeexamplecssgrid2
         p o-grid__col-3@desktop o-grid__col-start-10@desktop
       .demoitem(class="o-grid__col-6@desktop o-grid__col-start-4@desktop")
         p o-grid__col-6@desktop o-grid__col-start-4@desktop
+      .demoitem(class="o-grid__col-4@desktop")
+        p First, but unordered
+      .demoitem(class="o-grid__col-4@desktop o-order--2@desktop")
+        p Second, but last
+      .demoitem(class="o-grid__col-4@desktop o-order--1@desktop")
+        p Third, but first
 
 mixin codeexample1
   .container.mb-7

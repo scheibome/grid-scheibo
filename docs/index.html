@@ -334,7 +334,7 @@ $col-grid-breaks: (
         <div class="container">
           <div class="o-row o-row--justify-center">
             <div class="o-row__col-2/3">
-              <pre><code class="language-html">&lt;!-- 12 Column Grid with offset --&gt;
+              <pre><code class="language-html">&lt;!-- 12 Column Grid with offset and order --&gt;
 &lt;div class="o-grid o-grid-1-1-1@tablet o-grid-12cols@desktop"&gt;
   &lt;div&gt;Your Content&lt;/div&gt;
   &lt;div&gt;Your Content&lt;/div&gt;
@@ -356,6 +356,9 @@ $col-grid-breaks: (
   &lt;div class="o-grid__col-3@desktop o-grid__col-start-3@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-grid__col-3@desktop o-grid__col-start-10@desktop"&gt;Your Content&lt;/div&gt;
   &lt;div class="o-grid__col-6@desktop o-grid__col-start-4@desktop"&gt;Your Content&lt;/div&gt;
+  &lt;div class="o-grid__col-4@desktop"&gt;First, but unordered&lt;/div&gt;
+  &lt;div class="o-grid__col-4@desktop o-order--2@desktop"&gt;Third, but first&lt;/div&gt;
+  &lt;div class="o-grid__col-4@desktop o-order--1@desktop"&gt;Second, but last&lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
           </div>
@@ -419,6 +422,15 @@ $col-grid-breaks: (
             </div>
             <div class="demoitem o-grid__col-6@desktop o-grid__col-start-4@desktop">
               <p>o-grid__col-6@desktop o-grid__col-start-4@desktop</p>
+            </div>
+            <div class="demoitem o-grid__col-4@desktop">
+              <p>First, but unordered</p>
+            </div>
+            <div class="demoitem o-grid__col-4@desktop o-order--2@desktop">
+              <p>Second, but last</p>
+            </div>
+            <div class="demoitem o-grid__col-4@desktop o-order--1@desktop">
+              <p>Third, but first</p>
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ $col-widths: map.merge($col-widths-defaults, $col-widths);
 
 @import 'cssgrid-scheibo';
 @import 'grid-scheibo';
+@import 'grid-order-scheibo';
 
 // Default variable overrides
 $primary: #175883;

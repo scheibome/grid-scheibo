@@ -27,10 +27,9 @@
 
   @each $break, $breakValue in $col-grid-breaks {
     @media only screen and (min-width: $breakValue) {
-
-      &\@#{$break} {
-        @for $i from 1 through 12 {
-          &--#{$i} {
+      @for $i from 1 through 12 {
+        &--#{$i} {
+          &\@#{$break} {
             order: $i;
           }
         }
