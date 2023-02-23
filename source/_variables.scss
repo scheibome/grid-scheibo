@@ -28,6 +28,7 @@ $col-widths: map.merge($col-widths-defaults, $col-widths);
 // Grid Setup
 $grid-setup: () !default;
 $grid-setup-defaults: (
+  '12cols': 'repeat(12, 1fr)',
   '1-1': '1fr 1fr',
   '1-1-1': '1fr 1fr 1fr',
   '1-2-1': '1fr 2fr 1fr'

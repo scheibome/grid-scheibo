@@ -34,6 +34,7 @@ section.py-6.bg-light
             |
             | // your grid with CSS-Grid
             | $grid-setup: (
+            | '12cols': 'repeat(12, 1fr)',
             | '1-1': '1fr 1fr',
             | '1-1-1': '1fr 1fr 1fr',
             | '1-2-1': '1fr 2fr'
@@ -75,6 +76,11 @@ section.py-6.bg-light
             | // set your own classname for css-grid
             | .yourownclassname {
             |   @include css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
+            | }
+            |
+            | // set your own classname for css-grid without offset
+            | .yourownclassname {
+            |   @include css-grid-scheibo-base($col-gutter-size, $grid-setup, $col-grid-breaks);
             | }
             |
             | // set your own classname for flexbox-grid

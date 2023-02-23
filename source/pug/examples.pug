@@ -1,11 +1,11 @@
 mixin codeexamplecssgrid1
-  .container
+  .container.mb-7
     .o-row.o-row--justify-center
       div(class="o-row__col-2/3")
         pre
           code.language-html
             | &lt;!-- o-row--nogutter --&gt;
-            | &lt;div class="o-grid o-grid--nogutter@tablet  o-grid--gutter@desktop o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop"&gt;
+            | &lt;div class="o-grid o-grid--nogutter@tablet o-grid--gutter@desktop o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop"&gt;
             |   &lt;div&gt;Your Content&lt;/div&gt;
             |   &lt;div&gt;Your Content&lt;/div&gt;
             |   &lt;div&gt;Your Content&lt;/div&gt;
@@ -16,25 +16,65 @@ mixin codeexamplecssgrid1
             |   &lt;div&gt;Your Content&lt;/div&gt;
             | &lt;/div&gt;
 
-    div(class="o-grid o-grid--nogutter@tablet  o-grid--gutter@desktop o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop")
-      .demoitem
-        p Your Content
-      .demoitem
-        p Your Content
-      .demoitem
-         p Your Content
-      .demoitem
-        p Your Content
-      .demoitem
-        p Your Content
-      .demoitem
-        p Your Content
-      .demoitem
-        p Your Content
-      .demoitem
-        p Your Content
-      .demoitem
-        p Your Content
+    div(class="o-grid o-grid--nogutter@tablet o-grid--gutter@desktop o-grid-1-1 o-grid-1-1-1@tablet o-grid-1-2-1@desktop")
+      - let n = 0;
+      while n < 12
+        .demoitem
+          p Your Content
+        - n++
+
+mixin codeexamplecssgrid2
+  .container
+    .o-row.o-row--justify-center
+      div(class="o-row__col-2/3")
+        pre
+          code.language-html
+            | &lt;!-- 12 Column Grid with offset --&gt;
+            | &lt;div class="o-grid o-grid-1-1-1@tablet o-grid-12cols@desktop"&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-9@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-4@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-6@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-4@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-4@desktop o-grid__col-start-9@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-3@desktop o-grid__col-start-3@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-3@desktop o-grid__col-start-10@desktop"&gt;Your Content&lt;/div&gt;
+            |   &lt;div class="o-grid__col-6@desktop o-grid__col-start-4@desktop"&gt;Your Content&lt;/div&gt;
+            | &lt;/div&gt;
+
+    div(class="o-grid o-grid-1-1-1@tablet o-grid-12cols@desktop")
+      - let q = 0;
+      while q < 12
+        .demoitem
+          p Your Content
+        - q++
+      .demoitem(class="o-grid__col-9@desktop")
+        p o-grid__col-9@desktop
+      .demoitem(class="o-grid__col-4@desktop")
+        p o-grid__col-4@desktop
+      .demoitem(class="o-grid__col-6@desktop")
+        p o-grid__col-6@desktop
+      .demoitem(class="o-grid__col-4@desktop")
+        p o-grid__col-4@desktop
+      .demoitem(class="o-grid__col-4@desktop o-grid__col-start-9@desktop")
+        p o-grid__col-4@desktop o-grid__col-start-9@desktop
+      .demoitem(class="o-grid__col-3@desktop o-grid__col-start-3@desktop")
+        p o-grid__col-3@desktop o-grid__col-start-3@desktop
+      .demoitem(class="o-grid__col-3@desktop o-grid__col-start-10@desktop")
+        p o-grid__col-3@desktop o-grid__col-start-10@desktop
+      .demoitem(class="o-grid__col-6@desktop o-grid__col-start-4@desktop")
+        p o-grid__col-6@desktop o-grid__col-start-4@desktop
 
 mixin codeexample1
   .container.mb-7

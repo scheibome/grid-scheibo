@@ -145,7 +145,7 @@
   }
 }
 
-@mixin css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks) {
+@mixin css-grid-scheibo-base($col-gutter-size, $grid-setup, $col-grid-breaks) {
   display: grid;
   grid-gap: $col-gutter-size;
 
@@ -192,4 +192,28 @@
       }
     }
   }
+}
+
+@mixin css-grid-scheibo-offsets($col-gutter-size, $grid-setup, $col-grid-breaks) {
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (min-width: $breakValue) {
+      @for $i from 1 through 12 {
+        @for $y from 1 through 12 {
+          .o-grid__col-start-#{$y}\@#{$break}.o-grid__col-#{$i}\@#{$break} {
+            grid-column: #{$y} / span #{$i};
+          }
+        }
+
+        // as in bootstrap
+        .o-grid__col-#{$i}\@#{$break} {
+          grid-column-start: span #{$i};
+        }
+      }
+    }
+  }
+}
+
+@mixin css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks) {
+  @include css-grid-scheibo-base($col-gutter-size, $grid-setup, $col-grid-breaks);
+  @include css-grid-scheibo-offsets($col-gutter-size, $grid-setup, $col-grid-breaks);
 }
