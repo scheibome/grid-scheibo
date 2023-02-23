@@ -18,6 +18,27 @@
   }
 }
 
+@mixin o-order($col-grid-breaks) {
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      order: $i;
+    }
+  }
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (min-width: $breakValue) {
+
+      &\@#{$break} {
+        @for $i from 1 through 12 {
+          &--#{$i} {
+            order: $i;
+          }
+        }
+      }
+    }
+  }
+}
+
 @mixin grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks) {
   $this: &;
   $this-short: string.slice(#{$this}, 2);
