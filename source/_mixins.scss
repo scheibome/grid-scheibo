@@ -177,6 +177,14 @@
     grid-gap: $col-gutter-size;
   }
 
+  &--column-gutter {
+    column-gap: $col-gutter-size;
+  }
+
+  &--row-gutter {
+    row-gap: $col-gutter-size;
+  }
+
   @each $key, $value in $grid-setup {
     &-#{$key} {
       grid-template-columns: #{$value};
@@ -195,6 +203,18 @@
       &--gutter {
         &\@#{$break} {
           grid-gap: $col-gutter-size;
+        }
+      }
+
+      &--column-gutter {
+        &\@#{$break} {
+          column-gap: $col-gutter-size;
+        }
+      }
+
+      &--row-gutter {
+        &\@#{$break} {
+          row-gap: $col-gutter-size;
         }
       }
 
