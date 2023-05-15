@@ -37,11 +37,11 @@
     "postcss-cli": "^10.0.0",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
-    "rimraf": "^4.1.2",
+    "rimraf": "^5.0.0",
     "sass": "^1.54.0",
-    "stylelint": "^14.9.1",
-    "stylelint-config-standard-scss": "^5.0.0",
-    "stylelint-scss": "^4.3.0",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard-scss": "^9.0.0",
+    "stylelint-scss": "^5.0.0",
     "stylelint-use-logical": "^2.0.0"
   },
   "sasslintConfig": ".scss-lint.yml"

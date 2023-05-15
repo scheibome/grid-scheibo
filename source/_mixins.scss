@@ -29,7 +29,7 @@
   }
 
   @each $break, $breakValue in $col-grid-breaks {
-    @media only screen and (min-width: $breakValue) {
+    @media only screen and (width >= $breakValue) {
       @for $i from 1 through 12 {
         &--#{$i} {
           &\@#{$break} {
@@ -96,7 +96,7 @@
   }
 
   @each $break, $breakValue in $col-grid-breaks {
-    @media only screen and (min-width: $breakValue) {
+    @media only screen and (width >= $breakValue) {
       &\@#{$break} {
         display: flex;
         flex-wrap: wrap;
@@ -195,7 +195,7 @@
   }
 
   @each $break, $breakValue in $col-grid-breaks {
-    @media only screen and (min-width: $breakValue) {
+    @media only screen and (width >= $breakValue) {
 
       &--nogutter {
         &\@#{$break} {
@@ -239,7 +239,7 @@
 
 @mixin css-grid-scheibo-offsets($col-gutter-size, $grid-setup, $col-grid-breaks) {
   @each $break, $breakValue in $col-grid-breaks {
-    @media only screen and (min-width: $breakValue) {
+    @media only screen and (width >= $breakValue) {
       @for $i from 1 through 12 {
         @for $y from 1 through 12 {
           .o-grid__col-start-#{$y}\@#{$break}.o-grid__col-#{$i}\@#{$break} {
