@@ -4,17 +4,20 @@
 // Start mixins for grid.scheibo
 @mixin w-($size, $col-gutter-size) { /* stylelint-disable-line scss/at-mixin-pattern */
   @if $size == 'full' {
-    width: #{map.get($col-widths, $size)};
+    inline-size: #{map.get($col-widths, $size)};
   } @else {
-    width: calc(#{map.get($col-widths, $size)} * 100% - (1 - #{map.get($col-widths, $size)}) * #{$col-gutter-size});
+    inline-size:
+      calc(
+        #{map.get($col-widths, $size)} * 100% - (1 - #{map.get($col-widths, $size)}) * #{$col-gutter-size}
+      );
   }
 }
 
 @mixin w2-($size) { /* stylelint-disable-line scss/at-mixin-pattern */
   @if $size == 'full' {
-    width: #{map.get($col-widths, $size)};
+    inline-size: #{map.get($col-widths, $size)};
   } @else {
-    width: calc(#{map.get($col-widths, $size)} * 100% - (1 - #{map.get($col-widths, $size)}) * 0px);
+    inline-size: calc(#{map.get($col-widths, $size)} * 100% - (1 - #{map.get($col-widths, $size)}) * 0px);
   }
 }
 
