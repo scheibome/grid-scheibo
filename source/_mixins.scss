@@ -216,8 +216,16 @@
     grid-gap: $col-gutter-size;
   }
 
+  &--no-column-gutter {
+    column-gap: 0;
+  }
+
   &--column-gutter {
     column-gap: $col-gutter-size;
+  }
+
+  &--no-row-gutter {
+    row-gap: 0;
   }
 
   &--row-gutter {
@@ -248,6 +256,18 @@
       &--column-gutter {
         &\@#{$break} {
           column-gap: $col-gutter-size;
+        }
+      }
+
+      &--no-column-gutter {
+        &\@#{$break} {
+          column-gap: 0;
+        }
+      }
+
+      &--no-row-gutter {
+        &\@#{$break} {
+          row-gap: 0;
         }
       }
 
