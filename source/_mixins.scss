@@ -41,6 +41,42 @@
   }
 }
 
+@mixin align-content-center($col-grid-breaks) {
+  align-content: center;
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (width >= $breakValue) {
+      &\@#{$break} {
+        align-content: center;
+      }
+    }
+  }
+}
+
+@mixin align-content-start($col-grid-breaks) {
+  align-content: start;
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (width >= $breakValue) {
+      &\@#{$break} {
+        align-content: start;
+      }
+    }
+  }
+}
+
+@mixin align-content-end($col-grid-breaks) {
+  align-content: end;
+
+  @each $break, $breakValue in $col-grid-breaks {
+    @media only screen and (width >= $breakValue) {
+      &\@#{$break} {
+        align-content: end;
+      }
+    }
+  }
+}
+
 @mixin grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks) {
   $this: &;
   $this-short: string.slice(#{$this}, 2);
