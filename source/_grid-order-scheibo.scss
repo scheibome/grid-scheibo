@@ -1,5 +1,6 @@
-@import 'mixins';
+@use 'mixins';
+@use 'variables';
 
 .o-order {
-  @include o-order($col-grid-breaks);
+  @include mixins.o-order(variables.$col-grid-breaks);
 }

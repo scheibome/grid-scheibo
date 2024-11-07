@@ -14,24 +14,20 @@ section.py-6.bg-light
         pre
           code.scss
             | // Grid with CSS Grid
-            | @import
-            | '../node_modules/grid-scheibo/source/variables',
-            | '../node_modules/grid-scheibo/source/cssgrid-scheibo';
+            | @use '../node_modules/grid-scheibo/source/variables';
+            | @use '../node_modules/grid-scheibo/source/cssgrid-scheibo';
             |
             | // Grid with Flexbox
-            | @import
-            | '../node_modules/grid-scheibo/source/variables',
-            | '../node_modules/grid-scheibo/source/grid-scheibo';
+            | @use '../node_modules/grid-scheibo/source/variables';
+            | @use '../node_modules/grid-scheibo/source/grid-scheibo';
             |
             | // Order for Grid
-            | @import
-            | '../node_modules/grid-scheibo/source/variables',
-            | '../node_modules/grid-scheibo/source/grid-order-scheibo';
+            | @use '../node_modules/grid-scheibo/source/variables';
+            | @use '../node_modules/grid-scheibo/source/grid-order-scheibo';
             |
             | // Align content for Flexbox
-            | @import
-            | '../node_modules/grid-scheibo/source/variables',
-            | '../node_modules/grid-scheibo/source/grid-align-content-scheibo';
+            | @use '../node_modules/grid-scheibo/source/variables';
+            | @use '../node_modules/grid-scheibo/source/grid-align-content-scheibo';
 
       .text-center(class="o-row__col-2/3")
         h2.mt-6.text-primary#advancedusage(data-text="Advanced Usage") Advanced Usage
@@ -39,11 +35,15 @@ section.py-6.bg-light
       div(class="o-row__col-2/3")
         pre
           code.scss
+            | // include the variables and mixins from CSS-Scheibo
+            | @use '../../../node_modules/grid-scheibo/source/variables' as *;
+            | @use '../../../node_modules/grid-scheibo/source/mixins' as gridmixins;
+            |
             | // add own gutter size
             | $col-gutter-size: 2rem;
             |
             | // your grid with CSS-Grid
-            | $grid-setup: (
+            | $grid-setup: map.merge($grid-setup-defaults, (
             | '12cols': 'repeat(12, 1fr)',
             | '1-1': '1fr 1fr',
             | '1-1-1': '1fr 1fr 1fr',
@@ -51,7 +51,7 @@ section.py-6.bg-light
             | );
             |
             | // your grid with flexbox
-            | $col-widths: (
+            | $col-widths: map.merge($col-widths-defaults, (
             |   '1\\/8': '1/8',
             |   '2\\/8': '2/8',
             |   '3\\/8': '3/8',
@@ -63,16 +63,21 @@ section.py-6.bg-light
             | );
             |
             | // your breaks
-            | $col-grid-breaks: (
+            | $col-grid-breaks: map.merge($col-grid-breaks-defaults, (
             |   tablet: '900px',
             |   desktop: '1024px',
             |   wide: '1400px'
             | );
             |
             | // for using CSS-Grid
-            | @import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
+            | .o-grid {
+            |   @include gridmixins.css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
+            | }
+            |
             | // for using Flexbox
-            | @import '../../../node_modules/grid-scheibo/source/grid-scheibo';
+            | .o-row {
+            |   @include gridmixins.grid-scheibo(variables.$col-gutter-size, variables.$col-widths, variables.$col-grid-breaks);
+            | }
 
       .text-center(class="o-row__col-2/3")
         h2.mt-6.text-primary#personalize(data-text="Personalize") Personalize
@@ -80,20 +85,21 @@ section.py-6.bg-light
       div(class="o-row__col-2/3")
         pre
           code.scss
-            | // import mixins
-            | @import '../../../node_modules/grid-scheibo/source/mixins';
+            | // include the variables and mixins from CSS-Scheibo
+            | @use '../../../node_modules/grid-scheibo/source/variables' as *;
+            | @use '../../../node_modules/grid-scheibo/source/mixins' as gridmixins;
             |
             | // set your own classname for css-grid
             | .yourownclassname {
-            |   @include css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
+            |   @include gridmixins.css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
             | }
             |
             | // set your own classname for css-grid without offset
             | .yourownclassname {
-            |   @include css-grid-scheibo-base($col-gutter-size, $grid-setup, $col-grid-breaks);
+            |   @include gridmixins.css-grid-scheibo-base($col-gutter-size, $grid-setup, $col-grid-breaks);
             | }
             |
             | // set your own classname for flexbox-grid
             | .yourownclassname {
-            |   @include grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks);
+            |   @include gridmixins.grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks);
             | }

@@ -1,5 +1,6 @@
-@import 'mixins';
+@use 'mixins';
+@use 'variables';
 
 .o-row {
-  @include grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks);
+  @include mixins.grid-scheibo(variables.$col-gutter-size, variables.$col-widths, variables.$col-grid-breaks);
 }

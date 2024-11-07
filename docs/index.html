@@ -26,7 +26,7 @@
         <div class="o-row o-row--justify-center">
           <div class="text-center o-row__col-2/3">
             <h1 class="fs-4 text-secondary" data-text="Grid-Scheibo">Grid-Scheibo</h1>
-            <h2 class="fs-1 mt-3 text-primary fw-bold" data-text="A Simple SCSS Grid Based on CSS-Grid or Flexbox">A Simple SCSS Grid Based on<br>CSS-Grid or Flexbox</h2>
+            <h2 class="fs-1 mt-3 text-primary fw-bold" data-text="A Simple SCSS Grid Based on CSS-Grid or Flexbox">A Simple SCSS Grid<br>Based on CSS-Grid or Flexbox</h2>
           </div>
         </div>
       </div>
@@ -193,35 +193,35 @@
             </div>
             <div class="o-row__col-2/3">
               <pre><code class="scss">// Grid with CSS Grid
-@import
-'../node_modules/grid-scheibo/source/variables',
-'../node_modules/grid-scheibo/source/cssgrid-scheibo';
+@use '../node_modules/grid-scheibo/source/variables';
+@use '../node_modules/grid-scheibo/source/cssgrid-scheibo';
 
 // Grid with Flexbox
-@import
-'../node_modules/grid-scheibo/source/variables',
-'../node_modules/grid-scheibo/source/grid-scheibo';
+@use '../node_modules/grid-scheibo/source/variables';
+@use '../node_modules/grid-scheibo/source/grid-scheibo';
 
 // Order for Grid
-@import
-'../node_modules/grid-scheibo/source/variables',
-'../node_modules/grid-scheibo/source/grid-order-scheibo';
+@use '../node_modules/grid-scheibo/source/variables';
+@use '../node_modules/grid-scheibo/source/grid-order-scheibo';
 
 // Align content for Flexbox
-@import
-'../node_modules/grid-scheibo/source/variables',
-'../node_modules/grid-scheibo/source/grid-align-content-scheibo';</code></pre>
+@use '../node_modules/grid-scheibo/source/variables';
+@use '../node_modules/grid-scheibo/source/grid-align-content-scheibo';</code></pre>
             </div>
             <div class="text-center o-row__col-2/3">
               <h2 class="mt-6 text-primary" id="advancedusage" data-text="Advanced Usage">Advanced Usage</h2>
               <p class="mb-5">Insert your settings before the import</p>
             </div>
             <div class="o-row__col-2/3">
-              <pre><code class="scss">// add own gutter size
+              <pre><code class="scss">// include the variables and mixins from CSS-Scheibo
+@use '../../../node_modules/grid-scheibo/source/variables' as *;
+@use '../../../node_modules/grid-scheibo/source/mixins' as gridmixins;
+
+// add own gutter size
 $col-gutter-size: 2rem;
 
 // your grid with CSS-Grid
-$grid-setup: (
+$grid-setup: map.merge($grid-setup-defaults, (
 '12cols': 'repeat(12, 1fr)',
 '1-1': '1fr 1fr',
 '1-1-1': '1fr 1fr 1fr',
@@ -229,7 +229,7 @@ $grid-setup: (
 );
 
 // your grid with flexbox
-$col-widths: (
+$col-widths: map.merge($col-widths-defaults, (
   '1\\/8': '1/8',
   '2\\/8': '2/8',
   '3\\/8': '3/8',
@@ -241,38 +241,44 @@ $col-widths: (
 );
 
 // your breaks
-$col-grid-breaks: (
+$col-grid-breaks: map.merge($col-grid-breaks-defaults, (
   tablet: '900px',
   desktop: '1024px',
   wide: '1400px'
 );
 
 // for using CSS-Grid
-@import '../../../node_modules/grid-scheibo/source/cssgrid-scheibo';
+.o-grid {
+  @include gridmixins.css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
+}
+
 // for using Flexbox
-@import '../../../node_modules/grid-scheibo/source/grid-scheibo';</code></pre>
+.o-row {
+  @include gridmixins.grid-scheibo(variables.$col-gutter-size, variables.$col-widths, variables.$col-grid-breaks);
+}</code></pre>
             </div>
             <div class="text-center o-row__col-2/3">
               <h2 class="mt-6 text-primary" id="personalize" data-text="Personalize">Personalize</h2>
               <p class="mb-5">Set your own classname</p>
             </div>
             <div class="o-row__col-2/3">
-              <pre><code class="scss">// import mixins
-@import '../../../node_modules/grid-scheibo/source/mixins';
+              <pre><code class="scss">// include the variables and mixins from CSS-Scheibo
+@use '../../../node_modules/grid-scheibo/source/variables' as *;
+@use '../../../node_modules/grid-scheibo/source/mixins' as gridmixins;
 
 // set your own classname for css-grid
 .yourownclassname {
-  @include css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
+  @include gridmixins.css-grid-scheibo($col-gutter-size, $grid-setup, $col-grid-breaks);
 }
 
 // set your own classname for css-grid without offset
 .yourownclassname {
-  @include css-grid-scheibo-base($col-gutter-size, $grid-setup, $col-grid-breaks);
+  @include gridmixins.css-grid-scheibo-base($col-gutter-size, $grid-setup, $col-grid-breaks);
 }
 
 // set your own classname for flexbox-grid
 .yourownclassname {
-  @include grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks);
+  @include gridmixins.grid-scheibo($col-gutter-size, $col-widths, $col-grid-breaks);
 }</code></pre>
             </div>
           </div>
