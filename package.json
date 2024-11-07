@@ -1,6 +1,6 @@
 {
   "name": "grid-scheibo",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "A Simple SCSS Grid Based on CSS-Grid or Flexbox",
   "main": "index.js",
   "scripts": {
@@ -34,14 +34,14 @@
     "bootstrap": "^5.2.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.4",
-    "postcss-cli": "^10.0.0",
+    "postcss-cli": "^11.0.0",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
-    "rimraf": "^5.0.0",
+    "rimraf": "^6.0.1",
     "sass": "^1.54.0",
-    "stylelint": "^15.6.1",
-    "stylelint-config-standard-scss": "^9.0.0",
-    "stylelint-scss": "^5.0.0",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-scss": "^6.8.1",
     "stylelint-use-logical": "^2.0.0"
   },
   "sasslintConfig": ".scss-lint.yml"
