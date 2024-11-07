@@ -1,11 +1,11 @@
 @use 'sass:map';
-@import 'variables';
+@use 'variables';
 @import '../node_modules/bootstrap/scss/functions';
 
 $col-widths: (
   '1\\/12': '1/12',
 );
-$col-widths: map.merge($col-widths-defaults, $col-widths);
+$col-widths: map.merge(variables.$col-widths-defaults, $col-widths);
 
 @import 'cssgrid-scheibo';
 @import 'grid-scheibo';

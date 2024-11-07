@@ -1,13 +1,14 @@
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 .o-row_col__align-content-center {
-  @include align-content-center($col-grid-breaks);
+  @include mixins.align-content-center(variables.$col-grid-breaks);
 }
 
 .o-row_col__align-content-start {
-  @include align-content-start($col-grid-breaks);
+  @include mixins.align-content-start(variables.$col-grid-breaks);
 }
 
 .o-row_col__align-content-end {
-  @include align-content-end($col-grid-breaks);
+  @include mixins.align-content-end(variables.$col-grid-breaks);
 }
