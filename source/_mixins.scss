@@ -209,6 +209,10 @@
   display: grid;
   grid-gap: $col-gutter-size;
 
+  &--revert {
+    display: revert;
+  }
+
   &--nogutter {
     grid-gap: 0;
   }
@@ -241,6 +245,12 @@
 
   @each $break, $breakValue in $col-grid-breaks {
     @media only screen and (width >= $breakValue) {
+
+      &--revert {
+        &\@#{$break} {
+          display: revert;
+        }
+      }
 
       &--nogutter {
         &\@#{$break} {
