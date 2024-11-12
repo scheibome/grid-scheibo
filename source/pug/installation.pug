@@ -43,7 +43,7 @@ section.py-6.bg-light
             | $col-gutter-size: 2rem;
             |
             | // your grid with CSS-Grid
-            | $grid-setup: map.merge($grid-setup-defaults, (
+            | $grid-setup: (
             | '12cols': 'repeat(12, 1fr)',
             | '1-1': '1fr 1fr',
             | '1-1-1': '1fr 1fr 1fr',
@@ -51,7 +51,7 @@ section.py-6.bg-light
             | );
             |
             | // your grid with flexbox
-            | $col-widths: map.merge($col-widths-defaults, (
+            | $col-widths: (
             |   '1\\/8': '1/8',
             |   '2\\/8': '2/8',
             |   '3\\/8': '3/8',
@@ -63,7 +63,7 @@ section.py-6.bg-light
             | );
             |
             | // your breaks
-            | $col-grid-breaks: map.merge($col-grid-breaks-defaults, (
+            | $col-grid-breaks: (
             |   tablet: '900px',
             |   desktop: '1024px',
             |   wide: '1400px'
